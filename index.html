@@ -1581,6 +1581,424 @@
             color: #7c3aed;
         }
 
+        /* RIGHT SIDEBAR */
+        .right-sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            background: rgba(20,20,20,0.8);
+            border-left: 1px solid rgba(255,255,255,0.08);
+            padding: 1.5rem 1.2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        body.light .right-sidebar {
+            background: rgba(255,255,255,0.8);
+            border-left-color: rgba(0,0,0,0.08);
+        }
+
+        .rs-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 0.8rem;
+        }
+
+        .rs-person {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        body.light .rs-person {
+            border-bottom-color: rgba(0,0,0,0.05);
+        }
+
+        .rs-person:last-child { border-bottom: none; }
+
+        .rs-person:hover .rs-follow-btn { opacity: 1; }
+
+        .rs-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .rs-person-info { flex: 1; min-width: 0; }
+
+        .rs-person-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #e0e0e0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        body.light .rs-person-name { color: #1a1a1a; }
+
+        .rs-person-handle {
+            font-size: 11px;
+            color: #555;
+        }
+
+        .rs-follow-btn {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(0,212,255,0.4);
+            background: transparent;
+            color: #00d4ff;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+            opacity: 0.7;
+            flex-shrink: 0;
+        }
+
+        body.light .rs-follow-btn {
+            border-color: rgba(124,58,237,0.4);
+            color: #7c3aed;
+        }
+
+        .rs-follow-btn:hover, .rs-follow-btn.following {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            color: #fff;
+            border-color: transparent;
+            opacity: 1;
+        }
+
+        .rs-follow-btn.following { opacity: 1; }
+
+        /* COMMENTS */
+        .comments-section {
+            margin-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            animation: slideIn 0.25s ease;
+        }
+
+        body.light .comments-section { border-top-color: rgba(0,0,0,0.07); }
+
+        .comment-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .comment-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .comment-bubble {
+            flex: 1;
+            background: rgba(40,40,40,0.7);
+            border-radius: 10px;
+            padding: 8px 12px;
+        }
+
+        body.light .comment-bubble {
+            background: rgba(0,0,0,0.05);
+        }
+
+        .comment-author {
+            font-size: 12px;
+            font-weight: 700;
+            color: #e0e0e0;
+            margin-bottom: 2px;
+        }
+
+        body.light .comment-author { color: #1a1a1a; }
+
+        .comment-text {
+            font-size: 13px;
+            color: #aaa;
+            line-height: 1.4;
+        }
+
+        body.light .comment-text { color: #555; }
+
+        .comment-input-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .comment-input {
+            flex: 1;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 8px 14px;
+            font-size: 13px;
+            color: #e0e0e0;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        body.light .comment-input {
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.1);
+            color: #1a1a1a;
+        }
+
+        .comment-input::placeholder { color: #555; }
+
+        .comment-input:focus {
+            border-color: rgba(0,212,255,0.4);
+            background: rgba(0,212,255,0.04);
+        }
+
+        .comment-send {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .comment-send:disabled { opacity: 0.35; cursor: default; }
+
+        .comment-send:hover:not(:disabled) { transform: scale(1.1); }
+
+        /* SHARE MODAL */
+        .share-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .share-modal {
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            padding: 1.8rem;
+            width: 420px;
+            max-width: 95vw;
+            animation: slideUp 0.25s ease;
+        }
+
+        body.light .share-modal {
+            background: #fff;
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        .share-modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .share-preview {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        body.light .share-preview {
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.08);
+        }
+
+        .share-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 1.2rem;
+        }
+
+        .share-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #ccc;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        body.light .share-option {
+            background: rgba(0,0,0,0.03);
+            border-color: rgba(0,0,0,0.08);
+            color: #444;
+        }
+
+        .share-option:hover {
+            border-color: rgba(0,212,255,0.3);
+            background: rgba(0,212,255,0.06);
+            color: #00d4ff;
+        }
+
+        body.light .share-option:hover {
+            border-color: rgba(124,58,237,0.3);
+            background: rgba(124,58,237,0.06);
+            color: #7c3aed;
+        }
+
+        .share-link-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .share-link-input {
+            flex: 1;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 9px 12px;
+            font-size: 12px;
+            color: #888;
+            font-family: inherit;
+            outline: none;
+        }
+
+        body.light .share-link-input {
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        .share-copy-btn {
+            padding: 9px 16px;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .share-copy-btn:hover { transform: translateY(-1px); }
+
+        .share-close {
+            display: block;
+            width: 100%;
+            margin-top: 1rem;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #666;
+            font-size: 13px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        body.light .share-close { border-color: rgba(0,0,0,0.1); }
+        .share-close:hover { color: #e0e0e0; border-color: rgba(255,255,255,0.2); }
+
+        /* HOME LAYOUT WITH RIGHT SIDEBAR */
+        .home-layout {
+            display: flex;
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: flex-start;
+        }
+
+        .home-feed { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+
+        .home-right {
+            width: 260px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .home-right-card {
+            background: rgba(22,22,22,0.9);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 1.2rem;
+        }
+
+        body.light .home-right-card {
+            background: rgba(255,255,255,0.9);
+            border-color: rgba(0,0,0,0.08);
+        }
+
+        .action-btn.active {
+            color: #00d4ff;
+            border-color: rgba(0,212,255,0.3);
+            background: rgba(0,212,255,0.06);
+        }
+
+        body.light .action-btn.active {
+            color: #7c3aed;
+            border-color: rgba(124,58,237,0.3);
+            background: rgba(124,58,237,0.06);
+        }
+
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -1692,6 +2110,39 @@
                 { id: 3, author: 'Marina Tech', avatar: 'MT', time: 'há 6 horas', icon: '🤖', text: 'Machine Learning não é mais futurista, é presente. Implementei um modelo que prevê tendências com 94% de acurácia.', likes: 2103, comments: 234, media: null }
             ]);
             const [likedPosts, setLikedPosts] = React.useState({});
+            const [openComments, setOpenComments] = React.useState({});
+            const [commentInputs, setCommentInputs] = React.useState({});
+            const [comments, setComments] = React.useState({
+                1: [{ id: 1, author: 'Lucas Dev', avatar: 'LD', text: 'Incrível iniciativa! Open-source é o futuro 🚀' }],
+                2: [{ id: 1, author: 'Marina Tech', avatar: 'MT', text: 'Three.js é demais! Adorei o projeto.' }],
+                3: []
+            });
+            const [sharePost, setSharePost] = React.useState(null);
+            const [copiedLink, setCopiedLink] = React.useState(false);
+            const [following, setFollowing] = React.useState({});
+
+            const toggleComment = (id) => setOpenComments(p => ({ ...p, [id]: !p[id] }));
+
+            const sendComment = (postId) => {
+                const text = (commentInputs[postId] || '').trim();
+                if (!text) return;
+                const newC = { id: Date.now(), author: profile.name, avatar: profile.name.slice(0,2).toUpperCase(), avatarPhoto: profile.photo, text };
+                setComments(p => ({ ...p, [postId]: [...(p[postId] || []), newC] }));
+                setCommentInputs(p => ({ ...p, [postId]: '' }));
+                setPosts(prev => prev.map(p => p.id === postId ? { ...p, comments: p.comments + 1 } : p));
+            };
+
+            const copyLink = () => {
+                setCopiedLink(true);
+                setTimeout(() => setCopiedLink(false), 2000);
+            };
+
+            const people = [
+                { name: 'Sofia Rivera', handle: 'sofiadev', avatar: 'SR' },
+                { name: 'Lucas Dev', handle: 'lucasdev', avatar: 'LD' },
+                { name: 'Marina Tech', handle: 'marinatech', avatar: 'MT' },
+                { name: 'Pedro Silva', handle: 'pedrosilva', avatar: 'PS' },
+            ];
 
             const handleMediaSelect = (e) => {
                 const file = e.target.files[0];
@@ -1806,7 +2257,9 @@
                 switch (currentPage) {
                     case 'home':
                         return (
-                            <div className="feed-container">
+                            <div className="home-layout">
+                                {/* FEED */}
+                                <div className="home-feed">
                                 {posts.map(post => (
                                     <div key={post.id} className="post-card">
                                         <div className="post-header">
@@ -1836,14 +2289,103 @@
                                         )}
                                         {post.text ? <div className="post-text">{post.text}</div> : null}
                                         <div className="post-actions">
-                                            <button className="action-btn" onClick={() => setLikedPosts(p => ({ ...p, [post.id]: !p[post.id] }))}>
+                                            <button
+                                                className={`action-btn ${likedPosts[post.id] ? 'active' : ''}`}
+                                                onClick={() => setLikedPosts(p => ({ ...p, [post.id]: !p[post.id] }))}
+                                            >
                                                 {likedPosts[post.id] ? '❤️' : '🤍'} {post.likes + (likedPosts[post.id] ? 1 : 0)}
                                             </button>
-                                            <button className="action-btn">💬 {post.comments}</button>
-                                            <button className="action-btn">🔁 Compartilhar</button>
+                                            <button
+                                                className={`action-btn ${openComments[post.id] ? 'active' : ''}`}
+                                                onClick={() => toggleComment(post.id)}
+                                            >
+                                                💬 {(comments[post.id] || []).length + (post.comments - (post.id <= 3 ? (post.id === 1 ? 89 : post.id === 2 ? 45 : 234) : 0) + ((comments[post.id] || []).length))}
+                                            </button>
+                                            <button className="action-btn" onClick={() => setSharePost(post)}>
+                                                🔁 Compartilhar
+                                            </button>
                                         </div>
+
+                                        {/* COMMENTS SECTION */}
+                                        {openComments[post.id] && (
+                                            <div className="comments-section">
+                                                {(comments[post.id] || []).map(c => (
+                                                    <div key={c.id} className="comment-item">
+                                                        <div className="comment-avatar" style={{ overflow: 'hidden' }}>
+                                                            {c.avatarPhoto
+                                                                ? <img src={c.avatarPhoto} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px' }} />
+                                                                : c.avatar
+                                                            }
+                                                        </div>
+                                                        <div className="comment-bubble">
+                                                            <div className="comment-author">{c.author}</div>
+                                                            <div className="comment-text">{c.text}</div>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                                <div className="comment-input-row">
+                                                    <div className="comment-avatar" style={{ overflow: 'hidden' }}>
+                                                        {profile.photo
+                                                            ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px' }} />
+                                                            : profile.name.slice(0,2).toUpperCase()
+                                                        }
+                                                    </div>
+                                                    <input
+                                                        className="comment-input"
+                                                        placeholder="Escreva um comentário..."
+                                                        value={commentInputs[post.id] || ''}
+                                                        onChange={e => setCommentInputs(p => ({ ...p, [post.id]: e.target.value }))}
+                                                        onKeyDown={e => e.key === 'Enter' && sendComment(post.id)}
+                                                    />
+                                                    <button
+                                                        className="comment-send"
+                                                        onClick={() => sendComment(post.id)}
+                                                        disabled={!(commentInputs[post.id] || '').trim()}
+                                                    >➤</button>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
+                                </div>
+
+                                {/* RIGHT SIDEBAR — Pessoas */}
+                                <div className="home-right">
+                                    <div className="home-right-card">
+                                        <div className="rs-section-title">Quem seguir</div>
+                                        {people.map((p, i) => (
+                                            <div key={i} className="rs-person">
+                                                <div className="rs-avatar">{p.avatar}</div>
+                                                <div className="rs-person-info">
+                                                    <div className="rs-person-name">{p.name}</div>
+                                                    <div className="rs-person-handle">@{p.handle}</div>
+                                                </div>
+                                                <button
+                                                    className={`rs-follow-btn ${following[i] ? 'following' : ''}`}
+                                                    onClick={() => setFollowing(f => ({ ...f, [i]: !f[i] }))}
+                                                >
+                                                    {following[i] ? '✓ Seguindo' : 'Seguir'}
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="home-right-card">
+                                        <div className="rs-section-title">Online agora</div>
+                                        {people.slice(0,3).map((p, i) => (
+                                            <div key={i} className="rs-person" onClick={() => { setActiveChat(i); setCurrentPage('messages'); }}>
+                                                <div style={{ position: 'relative' }}>
+                                                    <div className="rs-avatar">{p.avatar}</div>
+                                                    <div style={{ position: 'absolute', bottom: 0, right: 0, width: 10, height: 10, borderRadius: '50%', background: '#22c55e', border: '2px solid #1a1a1a' }}></div>
+                                                </div>
+                                                <div className="rs-person-info">
+                                                    <div className="rs-person-name">{p.name}</div>
+                                                    <div className="rs-person-handle" style={{ color: '#22c55e', fontSize: 11 }}>● Online</div>
+                                                </div>
+                                                <span style={{ fontSize: 16, color: '#555' }}>✉</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         );
 
@@ -2124,6 +2666,38 @@
 
             return (
                 <div className="app">
+                    {/* SHARE MODAL */}
+                    {sharePost && (
+                        <div className="share-modal-overlay" onClick={e => e.target === e.currentTarget && setSharePost(null)}>
+                            <div className="share-modal">
+                                <div className="share-modal-title">Compartilhar post</div>
+                                <div className="share-preview">
+                                    "{sharePost.text ? sharePost.text.slice(0, 80) + (sharePost.text.length > 80 ? '...' : '') : 'Post de ' + sharePost.author}"
+                                </div>
+                                <div className="share-options">
+                                    {[
+                                        { icon: '💬', label: 'WhatsApp' },
+                                        { icon: '✉️', label: 'Mensagem' },
+                                        { icon: '🐦', label: 'Twitter/X' },
+                                        { icon: '📘', label: 'Facebook' },
+                                    ].map((opt, i) => (
+                                        <button key={i} className="share-option" onClick={() => setSharePost(null)}>
+                                            <span style={{ fontSize: 20 }}>{opt.icon}</span>
+                                            {opt.label}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className="share-link-row">
+                                    <input className="share-link-input" readOnly value={`https://nexus.app/post/${sharePost.id}`} />
+                                    <button className="share-copy-btn" onClick={copyLink}>
+                                        {copiedLink ? '✓ Copiado!' : 'Copiar link'}
+                                    </button>
+                                </div>
+                                <button className="share-close" onClick={() => setSharePost(null)}>Fechar</button>
+                            </div>
+                        </div>
+                    )}
+
                     {/* EDIT PROFILE MODAL */}
                     {editingProfile && (
                         <div className="modal-overlay" onClick={e => e.target === e.currentTarget && setEditingProfile(false)}>
