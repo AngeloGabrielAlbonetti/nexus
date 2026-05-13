@@ -2473,43 +2473,7 @@
                                 ))}
                                 </div>
 
-                                {/* RIGHT SIDEBAR — Pessoas */}
-                                <div className="home-right">
-                                    <div className="home-right-card">
-                                        <div className="rs-section-title">Quem seguir</div>
-                                        {people.map((p, i) => (
-                                            <div key={i} className="rs-person">
-                                                <div className="rs-avatar">{p.avatar}</div>
-                                                <div className="rs-person-info">
-                                                    <div className="rs-person-name">{p.name}</div>
-                                                    <div className="rs-person-handle">@{p.handle}</div>
-                                                </div>
-                                                <button
-                                                    className={`rs-follow-btn ${following[i] ? 'following' : ''}`}
-                                                    onClick={() => setFollowing(f => ({ ...f, [i]: !f[i] }))}
-                                                >
-                                                    {following[i] ? '✓ Seguindo' : 'Seguir'}
-                                                </button>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="home-right-card">
-                                        <div className="rs-section-title">Online agora</div>
-                                        {people.slice(0,3).map((p, i) => (
-                                            <div key={i} className="rs-person" onClick={() => { setActiveChat(i); setCurrentPage('messages'); }}>
-                                                <div style={{ position: 'relative' }}>
-                                                    <div className="rs-avatar">{p.avatar}</div>
-                                                    <div style={{ position: 'absolute', bottom: 0, right: 0, width: 10, height: 10, borderRadius: '50%', background: '#22c55e', border: '2px solid #1a1a1a' }}></div>
-                                                </div>
-                                                <div className="rs-person-info">
-                                                    <div className="rs-person-name">{p.name}</div>
-                                                    <div className="rs-person-handle" style={{ color: '#22c55e', fontSize: 11 }}>● Online</div>
-                                                </div>
-                                                <span style={{ fontSize: 16, color: '#555' }}>✉</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
+
                             </div>
                         );
 
