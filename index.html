@@ -2016,66 +2016,190 @@
             background: rgba(255, 255, 255, 0.3);
         }
 
+        /* ===================== MOBILE ===================== */
         @media (max-width: 768px) {
+            body { overflow: hidden; }
+
+            .app {
+                flex-direction: column;
+                height: 100dvh;
+                height: 100vh;
+            }
+
+            /* Sidebar vira bottom navigation bar */
             .sidebar {
-                width: 70px;
-                padding: 1rem 0.5rem;
+                width: 100%;
+                height: auto;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                padding: 0;
+                border-right: none;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                order: 2;
+                flex-shrink: 0;
+                z-index: 100;
+            }
+
+            body.light .sidebar {
+                border-top-color: rgba(0,0,0,0.1);
+                border-right: none;
+            }
+
+            /* Logo e perfil somem no mobile */
+            .logo { display: none; }
+            .sidebar-bottom { display: none; }
+
+            /* Nav vira linha horizontal */
+            .nav-list {
+                flex-direction: row;
+                gap: 0;
+                width: 100%;
+                justify-content: space-around;
             }
 
             .nav-btn {
-                padding: 12px 8px;
+                flex-direction: column;
+                gap: 3px;
+                padding: 10px 6px 8px;
+                border-radius: 0;
+                border: none !important;
+                background: transparent !important;
+                font-size: 10px;
+                flex: 1;
                 justify-content: center;
-                gap: 0;
             }
+
+            .nav-btn.active {
+                color: #00d4ff;
+                background: transparent !important;
+            }
+
+            body.light .nav-btn.active { color: #7c3aed; }
 
             .nav-btn span:last-child {
-                display: none;
+                font-size: 10px;
+                display: block;
             }
 
-            .logo {
-                justify-content: center;
-                margin-bottom: 2rem;
-            }
+            .nav-icon { font-size: 22px; }
 
-            .logo span:last-child {
-                display: none;
-            }
-
-            .user-profile {
-                padding: 8px;
+            /* Main ocupa todo o espaço restante */
+            .main {
+                flex: 1;
+                order: 1;
+                overflow: hidden;
+                display: flex;
                 flex-direction: column;
-                gap: 4px;
-            }
-
-            .user-info {
-                display: none;
-            }
-
-            .theme-toggle span:last-child {
-                display: none;
-            }
-
-            .theme-toggle {
-                justify-content: center;
-                gap: 0;
-                padding: 12px 8px;
+                min-height: 0;
             }
 
             .header {
-                padding: 1rem;
+                padding: 0.75rem 1rem;
+                flex-shrink: 0;
             }
 
-            .search-box {
-                width: 150px;
-            }
+            .header-title { font-size: 18px; }
 
-            .explore-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
+            .search-box { width: 130px; font-size: 13px; }
 
             .content {
-                padding: 1rem;
+                flex: 1;
+                padding: 0.75rem;
+                overflow-y: auto;
+                min-height: 0;
             }
+
+            /* Feed */
+            .home-layout {
+                flex-direction: column;
+                gap: 0.75rem;
+                max-width: 100%;
+            }
+
+            .home-right { display: none; }
+
+            .home-feed { gap: 0.75rem; }
+
+            .feed-container { gap: 0.75rem; }
+
+            .post-card { padding: 1rem; }
+
+            .post-actions { gap: 0.5rem; flex-wrap: wrap; }
+
+            .action-btn { font-size: 12px; padding: 5px 9px; }
+
+            /* Explore */
+            .explore-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+
+            /* Messages / Chat */
+            .chat-layout {
+                flex-direction: column;
+                height: calc(100dvh - 140px) !important;
+                height: calc(100vh - 140px) !important;
+                border-radius: 12px;
+            }
+
+            .chat-contacts {
+                width: 100%;
+                max-height: 180px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                flex-shrink: 0;
+            }
+
+            body.light .chat-contacts {
+                border-bottom-color: rgba(0,0,0,0.1);
+            }
+
+            .chat-contact-item { padding: 10px 14px; }
+
+            .chat-window { flex: 1; min-height: 0; }
+
+            .chat-messages { padding: 12px; }
+
+            .chat-input-area { padding: 10px 12px; }
+
+            /* Profile */
+            .profile-stats {
+                max-width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            /* Create */
+            .create-page { gap: 0.75rem; }
+
+            .create-type-tabs { gap: 6px; }
+
+            .create-card { padding: 1rem; }
+
+            /* Settings */
+            .settings-list { max-width: 100%; }
+
+            /* Modals */
+            .modal-box { padding: 1.5rem; border-radius: 16px; }
+
+            .share-modal { padding: 1.5rem; border-radius: 16px; }
+
+            .share-options { grid-template-columns: 1fr 1fr; }
+
+            /* Chat contacts on mobile — smaller avatars */
+            .message-avatar { width: 40px; height: 40px; font-size: 13px; }
+        }
+
+        /* Very small phones */
+        @media (max-width: 380px) {
+            .nav-btn span:last-child { display: none; }
+            .nav-icon { font-size: 24px; }
+            .nav-btn { padding: 12px 4px; }
+            .action-btn { font-size: 11px; padding: 4px 7px; }
+        }
+
+        @media (max-width: 768px) {
+            #mobile-theme-btn { display: flex !important; }
         }
     </style>
 </head>
@@ -2797,6 +2921,16 @@
                                     <span>{item.label}</span>
                                 </button>
                             ))}
+                            {/* Theme toggle only visible on mobile inside nav */}
+                            <button
+                                className="nav-btn"
+                                onClick={() => setDarkMode(!darkMode)}
+                                style={{ display: 'none' }}
+                                id="mobile-theme-btn"
+                            >
+                                <span className="nav-icon">{darkMode ? '☀' : '☽'}</span>
+                                <span>{darkMode ? 'Claro' : 'Escuro'}</span>
+                            </button>
                         </nav>
 
                         <div className="sidebar-bottom">
