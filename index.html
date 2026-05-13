@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,25 +14,25 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             background: #0f0f0f;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #e0e0e0;
             overflow: hidden;
         }
-
+        
         body.light {
             background: #f5f5f5;
             color: #1a1a1a;
         }
-
+        
         .app {
             display: flex;
             height: 100vh;
         }
-
         /* SIDEBAR */
+        
         .sidebar {
             width: 280px;
             background: rgba(20, 20, 20, 0.8);
@@ -43,12 +44,12 @@
             flex-direction: column;
             position: relative;
         }
-
+        
         body.light .sidebar {
             background: rgba(255, 255, 255, 0.8);
             border-right-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .logo {
             font-size: 28px;
             font-weight: 700;
@@ -62,7 +63,7 @@
             align-items: center;
             gap: 8px;
         }
-
+        
         .logo-icon {
             width: 32px;
             height: 32px;
@@ -75,14 +76,14 @@
             font-weight: 800;
             color: #fff;
         }
-
+        
         .nav-list {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-
+        
         .nav-btn {
             display: flex;
             align-items: center;
@@ -100,7 +101,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .nav-btn::before {
             content: '';
             position: absolute;
@@ -110,34 +111,34 @@
             transition: opacity 0.3s ease;
             z-index: -1;
         }
-
+        
         .nav-btn:hover {
             color: #e0e0e0;
             border-color: rgba(0, 212, 255, 0.3);
         }
-
+        
         .nav-btn.active {
             color: #fff;
             border-color: rgba(0, 212, 255, 0.5);
             background: rgba(0, 212, 255, 0.1);
             font-weight: 600;
         }
-
+        
         body.light .nav-btn {
             color: #666;
         }
-
+        
         body.light .nav-btn:hover {
             color: #1a1a1a;
             border-color: rgba(124, 58, 237, 0.3);
         }
-
+        
         body.light .nav-btn.active {
             color: #000;
             border-color: rgba(124, 58, 237, 0.5);
             background: rgba(124, 58, 237, 0.1);
         }
-
+        
         .nav-icon {
             width: 20px;
             height: 20px;
@@ -146,7 +147,7 @@
             justify-content: center;
             font-size: 18px;
         }
-
+        
         .sidebar-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 1.5rem;
@@ -154,11 +155,11 @@
             flex-direction: column;
             gap: 1rem;
         }
-
+        
         body.light .sidebar-bottom {
             border-top-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .user-profile {
             display: flex;
             align-items: center;
@@ -169,15 +170,15 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
+        
         body.light .user-profile {
             background: rgba(124, 58, 237, 0.05);
         }
-
+        
         .user-profile:hover {
             background: rgba(0, 212, 255, 0.1);
         }
-
+        
         .user-avatar {
             width: 40px;
             height: 40px;
@@ -191,12 +192,12 @@
             font-size: 16px;
             flex-shrink: 0;
         }
-
+        
         .user-info {
             flex: 1;
             min-width: 0;
         }
-
+        
         .user-name {
             font-size: 13px;
             font-weight: 600;
@@ -205,11 +206,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
+        
         body.light .user-name {
             color: #1a1a1a;
         }
-
+        
         .user-handle {
             font-size: 12px;
             color: #666;
@@ -217,7 +218,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
+        
         .theme-toggle {
             display: flex;
             align-items: center;
@@ -232,23 +233,23 @@
             font-family: inherit;
             font-size: 15px;
         }
-
+        
         body.light .theme-toggle {
             border-color: rgba(0, 0, 0, 0.1);
             color: #666;
         }
-
+        
         .theme-toggle:hover {
             border-color: rgba(0, 212, 255, 0.3);
             color: #e0e0e0;
         }
-
+        
         body.light .theme-toggle:hover {
             border-color: rgba(124, 58, 237, 0.3);
             color: #1a1a1a;
         }
-
         /* MAIN */
+        
         .main {
             flex: 1;
             display: flex;
@@ -256,11 +257,11 @@
             background: #0a0a0a;
             overflow: hidden;
         }
-
+        
         body.light .main {
             background: #fafafa;
         }
-
+        
         .header {
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1.5rem 2rem;
@@ -270,12 +271,12 @@
             background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(10px);
         }
-
+        
         body.light .header {
             background: rgba(255, 255, 255, 0.8);
             border-bottom-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .header-title {
             font-size: 24px;
             font-weight: 700;
@@ -284,7 +285,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        
         .search-box {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -296,37 +297,37 @@
             transition: all 0.3s ease;
             width: 250px;
         }
-
+        
         body.light .search-box {
             background: rgba(0, 0, 0, 0.05);
             border-color: rgba(0, 0, 0, 0.1);
             color: #1a1a1a;
         }
-
+        
         .search-box::placeholder {
             color: #666;
         }
-
+        
         .search-box:focus {
             outline: none;
             border-color: rgba(0, 212, 255, 0.5);
             background: rgba(0, 212, 255, 0.05);
         }
-
+        
         .content {
             flex: 1;
             overflow-y: auto;
             padding: 2rem;
         }
-
         /* HOME FEED */
+        
         .feed-container {
             max-width: 900px;
             margin: 0 auto;
             display: grid;
             gap: 1.5rem;
         }
-
+        
         .post-card {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -335,12 +336,12 @@
             transition: all 0.3s ease;
             animation: slideIn 0.3s ease;
         }
-
+        
         body.light .post-card {
             background: rgba(255, 255, 255, 0.8);
             border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -351,24 +352,24 @@
                 transform: translateY(0);
             }
         }
-
+        
         .post-card:hover {
             border-color: rgba(0, 212, 255, 0.3);
             background: rgba(30, 30, 30, 1);
         }
-
+        
         body.light .post-card:hover {
             border-color: rgba(124, 58, 237, 0.3);
             background: rgba(255, 255, 255, 1);
         }
-
+        
         .post-header {
             display: flex;
             align-items: center;
             gap: 12px;
             margin-bottom: 1rem;
         }
-
+        
         .post-avatar {
             width: 44px;
             height: 44px;
@@ -381,26 +382,26 @@
             font-weight: 600;
             flex-shrink: 0;
         }
-
+        
         .post-meta {
             flex: 1;
         }
-
+        
         .post-author {
             font-size: 14px;
             font-weight: 600;
             color: #e0e0e0;
         }
-
+        
         body.light .post-author {
             color: #1a1a1a;
         }
-
+        
         .post-time {
             font-size: 12px;
             color: #666;
         }
-
+        
         .post-image {
             width: 100%;
             aspect-ratio: 16/9;
@@ -415,34 +416,34 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+        
         .post-image:hover {
             border-color: rgba(0, 212, 255, 0.3);
             transform: scale(1.02);
         }
-
+        
         .post-text {
             font-size: 14px;
             line-height: 1.6;
             color: #b0b0b0;
             margin-bottom: 1rem;
         }
-
+        
         body.light .post-text {
             color: #555;
         }
-
+        
         .post-actions {
             display: flex;
             gap: 1rem;
             padding-top: 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+        
         body.light .post-actions {
             border-top-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .action-btn {
             display: flex;
             align-items: center;
@@ -457,31 +458,31 @@
             transition: all 0.3s ease;
             font-family: inherit;
         }
-
+        
         body.light .action-btn {
             border-color: rgba(0, 0, 0, 0.1);
             color: #666;
         }
-
+        
         .action-btn:hover {
             border-color: rgba(0, 212, 255, 0.3);
             color: #00d4ff;
             background: rgba(0, 212, 255, 0.05);
         }
-
+        
         body.light .action-btn:hover {
             border-color: rgba(124, 58, 237, 0.3);
             color: #7c3aed;
             background: rgba(124, 58, 237, 0.05);
         }
-
         /* EXPLORE GRID */
+        
         .explore-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 1.5rem;
         }
-
+        
         .explore-card {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -493,17 +494,17 @@
             display: flex;
             flex-direction: column;
         }
-
+        
         body.light .explore-card {
             background: rgba(255, 255, 255, 0.8);
             border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .explore-card:hover {
             border-color: rgba(0, 212, 255, 0.3);
             transform: translateY(-4px);
         }
-
+        
         .explore-image {
             flex: 1;
             background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
@@ -513,37 +514,37 @@
             font-size: 40px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+        
         body.light .explore-image {
             border-bottom-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .explore-info {
             padding: 1rem;
         }
-
+        
         .explore-title {
             font-size: 14px;
             font-weight: 600;
             color: #e0e0e0;
             margin-bottom: 4px;
         }
-
+        
         body.light .explore-title {
             color: #1a1a1a;
         }
-
+        
         .explore-users {
             font-size: 12px;
             color: #666;
         }
-
         /* PROFILE VIEW */
+        
         .profile-header {
             text-align: center;
             margin-bottom: 2rem;
         }
-
+        
         .profile-avatar {
             width: 100px;
             height: 100px;
@@ -557,35 +558,35 @@
             font-weight: 700;
             margin: 0 auto 1rem;
         }
-
+        
         .profile-name {
             font-size: 24px;
             font-weight: 700;
             color: #e0e0e0;
             margin-bottom: 4px;
         }
-
+        
         body.light .profile-name {
             color: #1a1a1a;
         }
-
+        
         .profile-handle {
             font-size: 14px;
             color: #666;
             margin-bottom: 1rem;
         }
-
+        
         .profile-bio {
             font-size: 14px;
             color: #b0b0b0;
             max-width: 400px;
             margin: 0 auto 1rem;
         }
-
+        
         body.light .profile-bio {
             color: #555;
         }
-
+        
         .profile-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -593,7 +594,7 @@
             max-width: 400px;
             margin: 0 auto 2rem;
         }
-
+        
         .stat-box {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -601,12 +602,12 @@
             padding: 1rem;
             text-align: center;
         }
-
+        
         body.light .stat-box {
             background: rgba(255, 255, 255, 0.8);
             border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .stat-number {
             font-size: 20px;
             font-weight: 700;
@@ -615,13 +616,13 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        
         .stat-label {
             font-size: 12px;
             color: #666;
             margin-top: 4px;
         }
-
+        
         .profile-btn {
             background: linear-gradient(135deg, #00d4ff, #7c3aed);
             color: #fff;
@@ -635,20 +636,20 @@
             font-family: inherit;
             display: inline-block;
         }
-
+        
         .profile-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
         }
-
         /* MESSAGES VIEW */
+        
         .messages-list {
             max-width: 600px;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-
+        
         .message-item {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -660,17 +661,17 @@
             gap: 12px;
             align-items: center;
         }
-
+        
         body.light .message-item {
             background: rgba(255, 255, 255, 0.8);
             border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .message-item:hover {
             border-color: rgba(0, 212, 255, 0.3);
             background: rgba(30, 30, 30, 1);
         }
-
+        
         .message-avatar {
             width: 48px;
             height: 48px;
@@ -683,22 +684,22 @@
             font-weight: 600;
             flex-shrink: 0;
         }
-
+        
         .message-content {
             flex: 1;
         }
-
+        
         .message-name {
             font-size: 14px;
             font-weight: 600;
             color: #e0e0e0;
             margin-bottom: 4px;
         }
-
+        
         body.light .message-name {
             color: #1a1a1a;
         }
-
+        
         .message-text {
             font-size: 13px;
             color: #666;
@@ -706,15 +707,15 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         /* SETTINGS VIEW */
+        
         .settings-list {
             max-width: 600px;
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-
+        
         .settings-item {
             background: rgba(30, 30, 30, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -726,26 +727,26 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        
         body.light .settings-item {
             background: rgba(255, 255, 255, 0.8);
             border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .settings-item:hover {
             border-color: rgba(0, 212, 255, 0.3);
         }
-
+        
         .settings-label {
             font-size: 14px;
             font-weight: 500;
             color: #e0e0e0;
         }
-
+        
         body.light .settings-label {
             color: #1a1a1a;
         }
-
+        
         .toggle {
             width: 44px;
             height: 24px;
@@ -755,11 +756,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
+        
         .toggle.on {
             background: linear-gradient(135deg, #00d4ff, #7c3aed);
         }
-
+        
         .toggle-dot {
             width: 20px;
             height: 20px;
@@ -770,40 +771,40 @@
             left: 2px;
             transition: all 0.3s ease;
         }
-
+        
         .toggle.on .toggle-dot {
             left: 22px;
         }
-
         /* CHAT VIEW */
+        
         .chat-layout {
             display: flex;
             height: 100%;
             gap: 0;
             max-width: 900px;
             margin: 0 auto;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             overflow: hidden;
         }
-
+        
         body.light .chat-layout {
-            border-color: rgba(0,0,0,0.1);
+            border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .chat-contacts {
             width: 280px;
             flex-shrink: 0;
-            border-right: 1px solid rgba(255,255,255,0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
             overflow-y: auto;
-            background: rgba(20,20,20,0.6);
+            background: rgba(20, 20, 20, 0.6);
         }
-
+        
         body.light .chat-contacts {
-            background: rgba(245,245,245,0.8);
-            border-right-color: rgba(0,0,0,0.1);
+            background: rgba(245, 245, 245, 0.8);
+            border-right-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .chat-contact-item {
             display: flex;
             align-items: center;
@@ -811,42 +812,42 @@
             padding: 14px 16px;
             cursor: pointer;
             transition: all 0.2s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-
+        
         body.light .chat-contact-item {
-            border-bottom-color: rgba(0,0,0,0.05);
+            border-bottom-color: rgba(0, 0, 0, 0.05);
         }
-
+        
         .chat-contact-item:hover {
             background: rgba(0, 212, 255, 0.08);
         }
-
+        
         .chat-contact-item.active {
             background: rgba(0, 212, 255, 0.12);
             border-left: 3px solid #00d4ff;
         }
-
+        
         body.light .chat-contact-item.active {
-            background: rgba(124,58,237,0.1);
+            background: rgba(124, 58, 237, 0.1);
             border-left-color: #7c3aed;
         }
-
+        
         .chat-contact-info {
             flex: 1;
             min-width: 0;
         }
-
+        
         .chat-contact-name {
             font-size: 14px;
             font-weight: 600;
             color: #e0e0e0;
         }
-
+        
         body.light .chat-contact-name {
             color: #1a1a1a;
         }
-
+        
         .chat-contact-preview {
             font-size: 12px;
             color: #666;
@@ -855,47 +856,47 @@
             text-overflow: ellipsis;
             margin-top: 2px;
         }
-
+        
         .chat-window {
             flex: 1;
             display: flex;
             flex-direction: column;
-            background: rgba(10,10,10,0.5);
+            background: rgba(10, 10, 10, 0.5);
         }
-
+        
         body.light .chat-window {
-            background: rgba(255,255,255,0.7);
+            background: rgba(255, 255, 255, 0.7);
         }
-
+        
         .chat-header {
             display: flex;
             align-items: center;
             gap: 12px;
             padding: 14px 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            background: rgba(20,20,20,0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(20, 20, 20, 0.6);
         }
-
+        
         body.light .chat-header {
-            background: rgba(245,245,245,0.8);
-            border-bottom-color: rgba(0,0,0,0.1);
+            background: rgba(245, 245, 245, 0.8);
+            border-bottom-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .chat-header-name {
             font-size: 15px;
             font-weight: 600;
             color: #e0e0e0;
         }
-
+        
         body.light .chat-header-name {
             color: #1a1a1a;
         }
-
+        
         .chat-header-status {
             font-size: 12px;
             color: #00d4ff;
         }
-
+        
         .chat-messages {
             flex: 1;
             overflow-y: auto;
@@ -904,7 +905,7 @@
             flex-direction: column;
             gap: 12px;
         }
-
+        
         .chat-empty {
             flex: 1;
             display: flex;
@@ -914,16 +915,16 @@
             color: #555;
             gap: 12px;
         }
-
+        
         .chat-empty-icon {
             font-size: 48px;
             opacity: 0.5;
         }
-
+        
         .chat-empty-text {
             font-size: 14px;
         }
-
+        
         .chat-bubble {
             max-width: 70%;
             padding: 10px 14px;
@@ -933,55 +934,61 @@
             word-break: break-word;
             animation: bubbleIn 0.2s ease;
         }
-
+        
         @keyframes bubbleIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
+        
         .chat-bubble.sent {
             align-self: flex-end;
             background: linear-gradient(135deg, #00d4ff, #7c3aed);
             color: #fff;
             border-bottom-right-radius: 4px;
         }
-
+        
         .chat-bubble.received {
             align-self: flex-start;
-            background: rgba(40,40,40,0.9);
+            background: rgba(40, 40, 40, 0.9);
             color: #e0e0e0;
             border-bottom-left-radius: 4px;
         }
-
+        
         body.light .chat-bubble.received {
-            background: rgba(230,230,230,0.9);
+            background: rgba(230, 230, 230, 0.9);
             color: #1a1a1a;
         }
-
+        
         .chat-bubble-time {
             font-size: 10px;
             opacity: 0.6;
             margin-top: 4px;
             text-align: right;
         }
-
+        
         .chat-input-area {
             display: flex;
             gap: 10px;
             padding: 14px 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            background: rgba(20,20,20,0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(20, 20, 20, 0.6);
         }
-
+        
         body.light .chat-input-area {
-            background: rgba(245,245,245,0.8);
-            border-top-color: rgba(0,0,0,0.1);
+            background: rgba(245, 245, 245, 0.8);
+            border-top-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .chat-input {
             flex: 1;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 10px 18px;
             font-size: 14px;
@@ -993,22 +1000,22 @@
             min-height: 42px;
             max-height: 120px;
         }
-
+        
         body.light .chat-input {
-            background: rgba(0,0,0,0.05);
-            border-color: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.1);
             color: #1a1a1a;
         }
-
+        
         .chat-input::placeholder {
             color: #555;
         }
-
+        
         .chat-input:focus {
-            border-color: rgba(0,212,255,0.5);
-            background: rgba(0,212,255,0.05);
+            border-color: rgba(0, 212, 255, 0.5);
+            background: rgba(0, 212, 255, 0.05);
         }
-
+        
         .chat-send-btn {
             width: 42px;
             height: 42px;
@@ -1023,18 +1030,18 @@
             transition: all 0.2s ease;
             flex-shrink: 0;
         }
-
+        
         .chat-send-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 4px 16px rgba(0,212,255,0.4);
+            box-shadow: 0 4px 16px rgba(0, 212, 255, 0.4);
         }
-
+        
         .chat-send-btn:disabled {
             opacity: 0.4;
             cursor: default;
             transform: none;
         }
-
+        
         .chat-no-selection {
             flex: 1;
             display: flex;
@@ -1045,17 +1052,17 @@
             gap: 12px;
             font-size: 14px;
         }
-
+        
         .chat-no-selection-icon {
             font-size: 52px;
             opacity: 0.4;
         }
-
         /* EDIT PROFILE MODAL */
+        
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(4px);
             z-index: 1000;
             display: flex;
@@ -1063,32 +1070,42 @@
             justify-content: center;
             animation: fadeIn 0.2s ease;
         }
-
+        
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-
+        
         .modal-box {
             background: #1a1a1a;
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 20px;
             padding: 2rem;
             width: 480px;
             max-width: 95vw;
             animation: slideUp 0.25s ease;
         }
-
+        
         body.light .modal-box {
             background: #ffffff;
-            border-color: rgba(0,0,0,0.1);
+            border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         @keyframes slideUp {
-            from { transform: translateY(24px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(24px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
-
+        
         .modal-title {
             font-size: 20px;
             font-weight: 700;
@@ -1098,7 +1115,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        
         .edit-photo-area {
             display: flex;
             flex-direction: column;
@@ -1106,7 +1123,7 @@
             margin-bottom: 1.5rem;
             gap: 10px;
         }
-
+        
         .edit-avatar {
             width: 90px;
             height: 90px;
@@ -1119,27 +1136,27 @@
             font-size: 32px;
             font-weight: 700;
             overflow: hidden;
-            border: 3px solid rgba(0,212,255,0.4);
+            border: 3px solid rgba(0, 212, 255, 0.4);
             cursor: pointer;
             position: relative;
             transition: all 0.2s;
         }
-
+        
         .edit-avatar:hover {
             border-color: #00d4ff;
-            box-shadow: 0 0 0 4px rgba(0,212,255,0.15);
+            box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.15);
         }
-
+        
         .edit-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
+        
         .edit-avatar-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1147,20 +1164,20 @@
             transition: opacity 0.2s;
             font-size: 22px;
         }
-
+        
         .edit-avatar:hover .edit-avatar-overlay {
             opacity: 1;
         }
-
+        
         .edit-photo-hint {
             font-size: 12px;
             color: #666;
         }
-
+        
         .edit-field {
             margin-bottom: 1rem;
         }
-
+        
         .edit-label {
             font-size: 12px;
             font-weight: 600;
@@ -1169,11 +1186,11 @@
             letter-spacing: 0.5px;
             margin-bottom: 6px;
         }
-
+        
         .edit-input {
             width: 100%;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 10px;
             padding: 10px 14px;
             font-size: 14px;
@@ -1182,44 +1199,44 @@
             outline: none;
             transition: all 0.2s;
         }
-
+        
         body.light .edit-input {
-            background: rgba(0,0,0,0.04);
-            border-color: rgba(0,0,0,0.12);
+            background: rgba(0, 0, 0, 0.04);
+            border-color: rgba(0, 0, 0, 0.12);
             color: #1a1a1a;
         }
-
+        
         .edit-input:focus {
-            border-color: rgba(0,212,255,0.5);
-            background: rgba(0,212,255,0.05);
+            border-color: rgba(0, 212, 255, 0.5);
+            background: rgba(0, 212, 255, 0.05);
         }
-
+        
         textarea.edit-input {
             resize: vertical;
             min-height: 80px;
         }
-
+        
         .edit-handle-prefix {
             display: flex;
             align-items: center;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 10px;
             overflow: hidden;
         }
-
+        
         body.light .edit-handle-prefix {
-            background: rgba(0,0,0,0.04);
-            border-color: rgba(0,0,0,0.12);
+            background: rgba(0, 0, 0, 0.04);
+            border-color: rgba(0, 0, 0, 0.12);
         }
-
+        
         .edit-handle-prefix span {
             padding: 10px 10px 10px 14px;
             color: #555;
             font-size: 14px;
             flex-shrink: 0;
         }
-
+        
         .edit-handle-prefix input {
             flex: 1;
             background: transparent;
@@ -1230,22 +1247,22 @@
             font-family: inherit;
             outline: none;
         }
-
+        
         body.light .edit-handle-prefix input {
             color: #1a1a1a;
         }
-
+        
         .modal-actions {
             display: flex;
             gap: 10px;
             margin-top: 1.5rem;
         }
-
+        
         .btn-cancel {
             flex: 1;
             padding: 10px;
             border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.12);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             background: transparent;
             color: #888;
             font-size: 14px;
@@ -1254,17 +1271,17 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
+        
         body.light .btn-cancel {
-            border-color: rgba(0,0,0,0.12);
+            border-color: rgba(0, 0, 0, 0.12);
             color: #555;
         }
-
+        
         .btn-cancel:hover {
-            border-color: rgba(255,255,255,0.25);
+            border-color: rgba(255, 255, 255, 0.25);
             color: #e0e0e0;
         }
-
+        
         .btn-save {
             flex: 2;
             padding: 10px;
@@ -1278,13 +1295,13 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
+        
         .btn-save:hover {
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(0,212,255,0.3);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
         }
-
         /* CREATE PAGE */
+        
         .create-page {
             max-width: 640px;
             margin: 0 auto;
@@ -1292,26 +1309,26 @@
             flex-direction: column;
             gap: 1.2rem;
         }
-
+        
         .create-card {
-            background: rgba(22,22,22,0.9);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(22, 22, 22, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 1.5rem;
         }
-
+        
         body.light .create-card {
-            background: rgba(255,255,255,0.9);
-            border-color: rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .create-top {
             display: flex;
             gap: 12px;
             align-items: flex-start;
             margin-bottom: 1rem;
         }
-
+        
         .create-textarea {
             flex: 1;
             background: transparent;
@@ -1324,31 +1341,31 @@
             min-height: 80px;
             line-height: 1.6;
         }
-
+        
         body.light .create-textarea {
             color: #1a1a1a;
         }
-
+        
         .create-textarea::placeholder {
             color: #444;
         }
-
+        
         body.light .create-textarea::placeholder {
             color: #aaa;
         }
-
+        
         .create-media-preview {
             position: relative;
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 1rem;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+        
         body.light .create-media-preview {
-            border-color: rgba(0,0,0,0.1);
+            border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .create-media-preview img,
         .create-media-preview video {
             width: 100%;
@@ -1356,7 +1373,7 @@
             object-fit: cover;
             display: block;
         }
-
+        
         .create-media-remove {
             position: absolute;
             top: 8px;
@@ -1364,7 +1381,7 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             border: none;
             color: #fff;
             font-size: 16px;
@@ -1374,28 +1391,28 @@
             justify-content: center;
             transition: background 0.2s;
         }
-
+        
         .create-media-remove:hover {
-            background: rgba(255,50,50,0.8);
+            background: rgba(255, 50, 50, 0.8);
         }
-
+        
         .create-divider {
             border: none;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             margin: 0;
         }
-
+        
         body.light .create-divider {
-            border-top-color: rgba(0,0,0,0.08);
+            border-top-color: rgba(0, 0, 0, 0.08);
         }
-
+        
         .create-toolbar {
             display: flex;
             align-items: center;
             gap: 4px;
             padding-top: 1rem;
         }
-
+        
         .create-tool-btn {
             display: flex;
             align-items: center;
@@ -1411,25 +1428,25 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
+        
         .create-tool-btn:hover {
-            background: rgba(0,212,255,0.08);
-            border-color: rgba(0,212,255,0.2);
+            background: rgba(0, 212, 255, 0.08);
+            border-color: rgba(0, 212, 255, 0.2);
         }
-
+        
         body.light .create-tool-btn {
             color: #7c3aed;
         }
-
+        
         body.light .create-tool-btn:hover {
-            background: rgba(124,58,237,0.08);
-            border-color: rgba(124,58,237,0.2);
+            background: rgba(124, 58, 237, 0.08);
+            border-color: rgba(124, 58, 237, 0.2);
         }
-
+        
         .create-tool-icon {
             font-size: 18px;
         }
-
+        
         .create-actions {
             display: flex;
             align-items: center;
@@ -1437,20 +1454,20 @@
             margin-top: 0;
             padding-top: 1rem;
         }
-
+        
         .create-char-count {
             font-size: 12px;
             color: #555;
         }
-
+        
         .create-char-count.warn {
             color: #f59e0b;
         }
-
+        
         .create-char-count.over {
             color: #ef4444;
         }
-
+        
         .create-submit-btn {
             background: linear-gradient(135deg, #00d4ff, #7c3aed);
             color: #fff;
@@ -1463,28 +1480,28 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
+        
         .create-submit-btn:hover:not(:disabled) {
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(0,212,255,0.35);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.35);
         }
-
+        
         .create-submit-btn:disabled {
             opacity: 0.35;
             cursor: default;
         }
-
+        
         .create-type-tabs {
             display: flex;
             gap: 8px;
             margin-bottom: 1.2rem;
         }
-
+        
         .create-type-tab {
             flex: 1;
             padding: 10px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             color: #666;
             font-size: 13px;
@@ -1497,27 +1514,27 @@
             justify-content: center;
             gap: 6px;
         }
-
+        
         body.light .create-type-tab {
-            background: rgba(0,0,0,0.03);
-            border-color: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.03);
+            border-color: rgba(0, 0, 0, 0.1);
             color: #999;
         }
-
+        
         .create-type-tab.active {
-            background: rgba(0,212,255,0.1);
-            border-color: rgba(0,212,255,0.4);
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.4);
             color: #00d4ff;
         }
-
+        
         body.light .create-type-tab.active {
-            background: rgba(124,58,237,0.1);
-            border-color: rgba(124,58,237,0.4);
+            background: rgba(124, 58, 237, 0.1);
+            border-color: rgba(124, 58, 237, 0.4);
             color: #7c3aed;
         }
-
+        
         .create-dropzone {
-            border: 2px dashed rgba(0,212,255,0.3);
+            border: 2px dashed rgba(0, 212, 255, 0.3);
             border-radius: 14px;
             padding: 2.5rem 1rem;
             display: flex;
@@ -1528,43 +1545,43 @@
             transition: all 0.2s;
             margin-bottom: 1rem;
         }
-
+        
         .create-dropzone:hover {
-            border-color: rgba(0,212,255,0.6);
-            background: rgba(0,212,255,0.04);
+            border-color: rgba(0, 212, 255, 0.6);
+            background: rgba(0, 212, 255, 0.04);
         }
-
+        
         body.light .create-dropzone {
-            border-color: rgba(124,58,237,0.3);
+            border-color: rgba(124, 58, 237, 0.3);
         }
-
+        
         body.light .create-dropzone:hover {
-            border-color: rgba(124,58,237,0.6);
-            background: rgba(124,58,237,0.04);
+            border-color: rgba(124, 58, 237, 0.6);
+            background: rgba(124, 58, 237, 0.04);
         }
-
+        
         .create-dropzone-icon {
             font-size: 40px;
         }
-
+        
         .create-dropzone-text {
             font-size: 14px;
             font-weight: 600;
             color: #e0e0e0;
         }
-
+        
         body.light .create-dropzone-text {
             color: #1a1a1a;
         }
-
+        
         .create-dropzone-sub {
             font-size: 12px;
             color: #666;
         }
-
+        
         .feed-published {
-            background: rgba(0,212,255,0.06);
-            border: 1px solid rgba(0,212,255,0.2);
+            background: rgba(0, 212, 255, 0.06);
+            border: 1px solid rgba(0, 212, 255, 0.2);
             border-radius: 12px;
             padding: 1rem 1.2rem;
             display: flex;
@@ -1574,31 +1591,31 @@
             color: #00d4ff;
             animation: slideIn 0.3s ease;
         }
-
+        
         body.light .feed-published {
-            background: rgba(124,58,237,0.06);
-            border-color: rgba(124,58,237,0.2);
+            background: rgba(124, 58, 237, 0.06);
+            border-color: rgba(124, 58, 237, 0.2);
             color: #7c3aed;
         }
-
         /* RIGHT SIDEBAR */
+        
         .right-sidebar {
             width: 280px;
             flex-shrink: 0;
-            background: rgba(20,20,20,0.8);
-            border-left: 1px solid rgba(255,255,255,0.08);
+            background: rgba(20, 20, 20, 0.8);
+            border-left: 1px solid rgba(255, 255, 255, 0.08);
             padding: 1.5rem 1.2rem;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
-
+        
         body.light .right-sidebar {
-            background: rgba(255,255,255,0.8);
-            border-left-color: rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.8);
+            border-left-color: rgba(0, 0, 0, 0.08);
         }
-
+        
         .rs-section-title {
             font-size: 13px;
             font-weight: 700;
@@ -1607,25 +1624,29 @@
             letter-spacing: 0.6px;
             margin-bottom: 0.8rem;
         }
-
+        
         .rs-person {
             display: flex;
             align-items: center;
             gap: 10px;
             padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             cursor: pointer;
             transition: all 0.2s;
         }
-
+        
         body.light .rs-person {
-            border-bottom-color: rgba(0,0,0,0.05);
+            border-bottom-color: rgba(0, 0, 0, 0.05);
         }
-
-        .rs-person:last-child { border-bottom: none; }
-
-        .rs-person:hover .rs-follow-btn { opacity: 1; }
-
+        
+        .rs-person:last-child {
+            border-bottom: none;
+        }
+        
+        .rs-person:hover .rs-follow-btn {
+            opacity: 1;
+        }
+        
         .rs-avatar {
             width: 38px;
             height: 38px;
@@ -1639,9 +1660,12 @@
             font-size: 13px;
             flex-shrink: 0;
         }
-
-        .rs-person-info { flex: 1; min-width: 0; }
-
+        
+        .rs-person-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
         .rs-person-name {
             font-size: 13px;
             font-weight: 600;
@@ -1650,20 +1674,22 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-        body.light .rs-person-name { color: #1a1a1a; }
-
+        
+        body.light .rs-person-name {
+            color: #1a1a1a;
+        }
+        
         .rs-person-handle {
             font-size: 11px;
             color: #555;
         }
-
+        
         .rs-follow-btn {
             font-size: 11px;
             font-weight: 700;
             padding: 4px 10px;
             border-radius: 20px;
-            border: 1px solid rgba(0,212,255,0.4);
+            border: 1px solid rgba(0, 212, 255, 0.4);
             background: transparent;
             color: #00d4ff;
             cursor: pointer;
@@ -1672,40 +1698,45 @@
             opacity: 0.7;
             flex-shrink: 0;
         }
-
+        
         body.light .rs-follow-btn {
-            border-color: rgba(124,58,237,0.4);
+            border-color: rgba(124, 58, 237, 0.4);
             color: #7c3aed;
         }
-
-        .rs-follow-btn:hover, .rs-follow-btn.following {
+        
+        .rs-follow-btn:hover,
+        .rs-follow-btn.following {
             background: linear-gradient(135deg, #00d4ff, #7c3aed);
             color: #fff;
             border-color: transparent;
             opacity: 1;
         }
-
-        .rs-follow-btn.following { opacity: 1; }
-
+        
+        .rs-follow-btn.following {
+            opacity: 1;
+        }
         /* COMMENTS */
+        
         .comments-section {
             margin-top: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.07);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
             padding-top: 1rem;
             display: flex;
             flex-direction: column;
             gap: 10px;
             animation: slideIn 0.25s ease;
         }
-
-        body.light .comments-section { border-top-color: rgba(0,0,0,0.07); }
-
+        
+        body.light .comments-section {
+            border-top-color: rgba(0, 0, 0, 0.07);
+        }
+        
         .comment-item {
             display: flex;
             gap: 10px;
             align-items: flex-start;
         }
-
+        
         .comment-avatar {
             width: 30px;
             height: 30px;
@@ -1719,45 +1750,49 @@
             font-weight: 700;
             flex-shrink: 0;
         }
-
+        
         .comment-bubble {
             flex: 1;
-            background: rgba(40,40,40,0.7);
+            background: rgba(40, 40, 40, 0.7);
             border-radius: 10px;
             padding: 8px 12px;
         }
-
+        
         body.light .comment-bubble {
-            background: rgba(0,0,0,0.05);
+            background: rgba(0, 0, 0, 0.05);
         }
-
+        
         .comment-author {
             font-size: 12px;
             font-weight: 700;
             color: #e0e0e0;
             margin-bottom: 2px;
         }
-
-        body.light .comment-author { color: #1a1a1a; }
-
+        
+        body.light .comment-author {
+            color: #1a1a1a;
+        }
+        
         .comment-text {
             font-size: 13px;
             color: #aaa;
             line-height: 1.4;
         }
-
-        body.light .comment-text { color: #555; }
-
+        
+        body.light .comment-text {
+            color: #555;
+        }
+        
         .comment-input-row {
             display: flex;
             gap: 8px;
             align-items: center;
         }
-
+        
         .comment-input {
             flex: 1;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 8px 14px;
             font-size: 13px;
@@ -1766,20 +1801,22 @@
             outline: none;
             transition: all 0.2s;
         }
-
+        
         body.light .comment-input {
-            background: rgba(0,0,0,0.04);
-            border-color: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.04);
+            border-color: rgba(0, 0, 0, 0.1);
             color: #1a1a1a;
         }
-
-        .comment-input::placeholder { color: #555; }
-
-        .comment-input:focus {
-            border-color: rgba(0,212,255,0.4);
-            background: rgba(0,212,255,0.04);
+        
+        .comment-input::placeholder {
+            color: #555;
         }
-
+        
+        .comment-input:focus {
+            border-color: rgba(0, 212, 255, 0.4);
+            background: rgba(0, 212, 255, 0.04);
+        }
+        
         .comment-send {
             width: 32px;
             height: 32px;
@@ -1795,16 +1832,21 @@
             transition: all 0.2s;
             flex-shrink: 0;
         }
-
-        .comment-send:disabled { opacity: 0.35; cursor: default; }
-
-        .comment-send:hover:not(:disabled) { transform: scale(1.1); }
-
+        
+        .comment-send:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+        
+        .comment-send:hover:not(:disabled) {
+            transform: scale(1.1);
+        }
         /* SHARE MODAL */
+        
         .share-modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.65);
+            background: rgba(0, 0, 0, 0.65);
             backdrop-filter: blur(4px);
             z-index: 2000;
             display: flex;
@@ -1812,22 +1854,22 @@
             justify-content: center;
             animation: fadeIn 0.2s ease;
         }
-
+        
         .share-modal {
             background: #1a1a1a;
-            border: 1px solid rgba(255,255,255,0.12);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
             padding: 1.8rem;
             width: 420px;
             max-width: 95vw;
             animation: slideUp 0.25s ease;
         }
-
+        
         body.light .share-modal {
             background: #fff;
-            border-color: rgba(0,0,0,0.1);
+            border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .share-modal-title {
             font-size: 18px;
             font-weight: 700;
@@ -1837,10 +1879,10 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        
         .share-preview {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 10px;
             padding: 10px 14px;
             font-size: 13px;
@@ -1850,26 +1892,26 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
+        
         body.light .share-preview {
-            background: rgba(0,0,0,0.04);
-            border-color: rgba(0,0,0,0.08);
+            background: rgba(0, 0, 0, 0.04);
+            border-color: rgba(0, 0, 0, 0.08);
         }
-
+        
         .share-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
             margin-bottom: 1.2rem;
         }
-
+        
         .share-option {
             display: flex;
             align-items: center;
             gap: 10px;
             padding: 12px 14px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 10px;
             cursor: pointer;
             font-size: 13px;
@@ -1878,35 +1920,35 @@
             font-family: inherit;
             transition: all 0.2s;
         }
-
+        
         body.light .share-option {
-            background: rgba(0,0,0,0.03);
-            border-color: rgba(0,0,0,0.08);
+            background: rgba(0, 0, 0, 0.03);
+            border-color: rgba(0, 0, 0, 0.08);
             color: #444;
         }
-
+        
         .share-option:hover {
-            border-color: rgba(0,212,255,0.3);
-            background: rgba(0,212,255,0.06);
+            border-color: rgba(0, 212, 255, 0.3);
+            background: rgba(0, 212, 255, 0.06);
             color: #00d4ff;
         }
-
+        
         body.light .share-option:hover {
-            border-color: rgba(124,58,237,0.3);
-            background: rgba(124,58,237,0.06);
+            border-color: rgba(124, 58, 237, 0.3);
+            background: rgba(124, 58, 237, 0.06);
             color: #7c3aed;
         }
-
+        
         .share-link-row {
             display: flex;
             gap: 8px;
             align-items: center;
         }
-
+        
         .share-link-input {
             flex: 1;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             padding: 9px 12px;
             font-size: 12px;
@@ -1914,12 +1956,12 @@
             font-family: inherit;
             outline: none;
         }
-
+        
         body.light .share-link-input {
-            background: rgba(0,0,0,0.04);
-            border-color: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.04);
+            border-color: rgba(0, 0, 0, 0.1);
         }
-
+        
         .share-copy-btn {
             padding: 9px 16px;
             background: linear-gradient(135deg, #00d4ff, #7c3aed);
@@ -1933,16 +1975,18 @@
             transition: all 0.2s;
             white-space: nowrap;
         }
-
-        .share-copy-btn:hover { transform: translateY(-1px); }
-
+        
+        .share-copy-btn:hover {
+            transform: translateY(-1px);
+        }
+        
         .share-close {
             display: block;
             width: 100%;
             margin-top: 1rem;
             padding: 10px;
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             color: #666;
             font-size: 13px;
@@ -1950,11 +1994,17 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
-        body.light .share-close { border-color: rgba(0,0,0,0.1); }
-        .share-close:hover { color: #e0e0e0; border-color: rgba(255,255,255,0.2); }
-
+        
+        body.light .share-close {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-close:hover {
+            color: #e0e0e0;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
         /* HOME LAYOUT WITH RIGHT SIDEBAR */
+        
         .home-layout {
             display: flex;
             gap: 1.5rem;
@@ -1962,9 +2012,15 @@
             margin: 0 auto;
             align-items: flex-start;
         }
-
-        .home-feed { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1.5rem; }
-
+        
+        .home-feed {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
         .home-right {
             width: 260px;
             flex-shrink: 0;
@@ -1974,452 +2030,257 @@
             position: sticky;
             top: 0;
         }
-
+        
         .home-right-card {
-            background: rgba(22,22,22,0.9);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(22, 22, 22, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 14px;
             padding: 1.2rem;
         }
-
+        
         body.light .home-right-card {
-            background: rgba(255,255,255,0.9);
-            border-color: rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(0, 0, 0, 0.08);
         }
-
+        
         .action-btn.active {
             color: #00d4ff;
-            border-color: rgba(0,212,255,0.3);
-            background: rgba(0,212,255,0.06);
+            border-color: rgba(0, 212, 255, 0.3);
+            background: rgba(0, 212, 255, 0.06);
         }
-
+        
         body.light .action-btn.active {
             color: #7c3aed;
-            border-color: rgba(124,58,237,0.3);
-            background: rgba(124,58,237,0.06);
+            border-color: rgba(124, 58, 237, 0.3);
+            background: rgba(124, 58, 237, 0.06);
         }
-
-        ::-webkit-scrollbar {
+        
+         ::-webkit-scrollbar {
             width: 6px;
         }
-
-        ::-webkit-scrollbar-track {
+        
+         ::-webkit-scrollbar-track {
             background: transparent;
         }
-
-        ::-webkit-scrollbar-thumb {
+        
+         ::-webkit-scrollbar-thumb {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 3px;
         }
-
-        ::-webkit-scrollbar-thumb:hover {
+        
+         ::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.3);
         }
-
+        
         @media (max-width: 768px) {
             .sidebar {
                 width: 70px;
                 padding: 1rem 0.5rem;
             }
-
             .nav-btn {
                 padding: 12px 8px;
                 justify-content: center;
                 gap: 0;
             }
-
             .nav-btn span:last-child {
                 display: none;
             }
-
             .logo {
                 justify-content: center;
                 margin-bottom: 2rem;
             }
-
             .logo span:last-child {
                 display: none;
             }
-
             .user-profile {
                 padding: 8px;
                 flex-direction: column;
                 gap: 4px;
             }
-
             .user-info {
                 display: none;
             }
-
             .theme-toggle span:last-child {
                 display: none;
             }
-
             .theme-toggle {
                 justify-content: center;
                 gap: 0;
                 padding: 12px 8px;
             }
-
             .header {
                 padding: 1rem;
             }
-
             .search-box {
                 width: 150px;
             }
-
             .explore-grid {
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
-
             .content {
                 padding: 1rem;
             }
         }
     </style>
 </head>
+
 <body>
     <div id="root"></div>
 
     <script type="text/babel">
-        const NexusApp = () => {
-            const [darkMode, setDarkMode] = React.useState(true);
-            const [currentPage, setCurrentPage] = React.useState('home');
-            const [searchQuery, setSearchQuery] = React.useState('');
-            const [activeChat, setActiveChat] = React.useState(null);
-            const [profile, setProfile] = React.useState({
-                name: 'Seu Perfil',
-                handle: 'seuusuario',
-                bio: 'Desenvolvedor apaixonado por tecnologia e inovação. Designer criativo e eterno aprendiz.',
-                photo: null
-            });
-            const [editingProfile, setEditingProfile] = React.useState(false);
-            const [editForm, setEditForm] = React.useState({});
-            const photoInputRef = React.useRef(null);
-            const mediaInputRef = React.useRef(null);
-
-            // Create post state
-            const [createText, setCreateText] = React.useState('');
-            const [createMedia, setCreateMedia] = React.useState(null); // { url, type: 'image'|'video', name }
-            const [createPostType, setCreatePostType] = React.useState('post'); // 'post' | 'story'
-            const [published, setPublished] = React.useState(false);
-            const [posts, setPosts] = React.useState([
-                { id: 1, author: 'Sofia Rivera', avatar: 'SR', time: 'há 2 horas', icon: '🚀', text: 'Acaba de lançar um novo projeto de IA que vai revolucionar o mercado. Totalmente open-source e disponível para todos!', likes: 1240, comments: 89, media: null },
-                { id: 2, author: 'Lucas Dev', avatar: 'LD', time: 'há 4 horas', icon: '💻', text: 'WebGL com Three.js é simplesmente incrível. Criei uma visualização 3D interativa de um sistema solar.', likes: 856, comments: 45, media: null },
-                { id: 3, author: 'Marina Tech', avatar: 'MT', time: 'há 6 horas', icon: '🤖', text: 'Machine Learning não é mais futurista, é presente. Implementei um modelo que prevê tendências com 94% de acurácia.', likes: 2103, comments: 234, media: null }
-            ]);
-            const [likedPosts, setLikedPosts] = React.useState({});
-            const [openComments, setOpenComments] = React.useState({});
-            const [commentInputs, setCommentInputs] = React.useState({});
-            const [comments, setComments] = React.useState({
-                1: [{ id: 1, author: 'Lucas Dev', avatar: 'LD', text: 'Incrível iniciativa! Open-source é o futuro 🚀' }],
-                2: [{ id: 1, author: 'Marina Tech', avatar: 'MT', text: 'Three.js é demais! Adorei o projeto.' }],
-                3: []
-            });
-            const [sharePost, setSharePost] = React.useState(null);
-            const [copiedLink, setCopiedLink] = React.useState(false);
-            const [following, setFollowing] = React.useState({});
-
-            const toggleComment = (id) => setOpenComments(p => ({ ...p, [id]: !p[id] }));
-
-            const sendComment = (postId) => {
-                const text = (commentInputs[postId] || '').trim();
-                if (!text) return;
-                const newC = { id: Date.now(), author: profile.name, avatar: profile.name.slice(0,2).toUpperCase(), avatarPhoto: profile.photo, text };
-                setComments(p => ({ ...p, [postId]: [...(p[postId] || []), newC] }));
-                setCommentInputs(p => ({ ...p, [postId]: '' }));
-                setPosts(prev => prev.map(p => p.id === postId ? { ...p, comments: p.comments + 1 } : p));
-            };
-
-            const copyLink = () => {
-                setCopiedLink(true);
-                setTimeout(() => setCopiedLink(false), 2000);
-            };
-
-            const people = [
-                { name: 'Sofia Rivera', handle: 'sofiadev', avatar: 'SR' },
-                { name: 'Lucas Dev', handle: 'lucasdev', avatar: 'LD' },
-                { name: 'Marina Tech', handle: 'marinatech', avatar: 'MT' },
-                { name: 'Pedro Silva', handle: 'pedrosilva', avatar: 'PS' },
-            ];
-
-            const handleMediaSelect = (e) => {
-                const file = e.target.files[0];
-                if (!file) return;
-                const url = URL.createObjectURL(file);
-                const type = file.type.startsWith('video') ? 'video' : 'image';
-                setCreateMedia({ url, type, name: file.name });
-                e.target.value = '';
-            };
-
-            const publishPost = () => {
-                if (!createText.trim() && !createMedia) return;
-                const newPost = {
-                    id: Date.now(),
-                    author: profile.name,
-                    avatar: profile.photo ? null : profile.name.slice(0, 2).toUpperCase(),
-                    avatarPhoto: profile.photo,
-                    time: 'agora mesmo',
-                    icon: null,
-                    text: createText,
-                    likes: 0,
-                    comments: 0,
-                    media: createMedia
-                };
-                setPosts(prev => [newPost, ...prev]);
-                setCreateText('');
-                setCreateMedia(null);
-                setPublished(true);
-                setTimeout(() => { setPublished(false); setCurrentPage('home'); }, 1800);
-            };
-
-            const openEditProfile = () => {
-                setEditForm({ name: profile.name, handle: profile.handle, bio: profile.bio, photo: profile.photo });
-                setEditingProfile(true);
-            };
-
-            const saveProfile = () => {
-                setProfile(editForm);
-                setEditingProfile(false);
-            };
-
-            const handlePhotoChange = (e) => {
-                const file = e.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = (ev) => setEditForm(f => ({ ...f, photo: ev.target.result }));
-                reader.readAsDataURL(file);
-            };
-            const [chatInput, setChatInput] = React.useState('');
-            const [conversations, setConversations] = React.useState({
-                0: [
-                    { id: 1, text: 'Ótimo projeto! Podemos colaborar?', sent: false, time: '14:20' },
-                    { id: 2, text: 'Claro! Que tipo de colaboração você tem em mente?', sent: true, time: '14:22' },
-                    { id: 3, text: 'Pensei em unir nossas ideias para o hackathon da próxima semana', sent: false, time: '14:23' },
-                ],
-                1: [
-                    { id: 1, text: 'Você viu o código que compartilhei?', sent: false, time: '11:10' },
-                    { id: 2, text: 'Vi sim! Muito elegante a solução do componente', sent: true, time: '11:15' },
-                ],
-                2: [
-                    { id: 1, text: 'Convite para webinar amanhã', sent: false, time: '09:00' },
-                ],
-                3: [
-                    { id: 1, text: 'Aprovou meu pull request!', sent: false, time: '08:45' },
-                    { id: 2, text: 'Muito bem! O código ficou bem limpo 🎉', sent: true, time: '08:50' },
-                ]
-            });
-            const messagesEndRef = React.useRef(null);
-
-            React.useEffect(() => {
-                if (messagesEndRef.current) {
-                    messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-                }
-            }, [conversations, activeChat]);
-
-            const sendMessage = () => {
-                const text = chatInput.trim();
-                if (!text || activeChat === null) return;
-                const newMsg = { id: Date.now(), text, sent: true, time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) };
-                setConversations(prev => ({
-                    ...prev,
-                    [activeChat]: [...(prev[activeChat] || []), newMsg]
-                }));
-                setChatInput('');
-            };
-
-            const handleChatKeyDown = (e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    sendMessage();
-                }
-            };
-
-            React.useEffect(() => {
-                document.body.className = darkMode ? '' : 'light';
-            }, [darkMode]);
-
-            const renderHeader = () => {
-                const titles = {
-                    home: 'Início',
-                    explore: 'Explorar',
-                    messages: 'Mensagens',
-                    notifications: 'Notificações',
-                    create: 'Criar',
-                    profile: 'Perfil',
-                    settings: 'Configurações'
-                };
-                return titles[currentPage] || 'Nexus';
-            };
-
-            const renderContent = () => {
-                switch (currentPage) {
-                    case 'home':
-                        return (
-                            <div className="home-layout">
-                                {/* FEED */}
-                                <div className="home-feed">
-                                {posts.map(post => (
-                                    <div key={post.id} className="post-card">
-                                        <div className="post-header">
-                                            <div className="post-avatar" style={{ overflow: 'hidden' }}>
-                                                {post.avatarPhoto
-                                                    ? <img src={post.avatarPhoto} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
-                                                    : post.avatar
-                                                }
-                                            </div>
-                                            <div className="post-meta">
-                                                <div className="post-author">{post.author}</div>
-                                                <div className="post-time">{post.time}</div>
-                                            </div>
-                                        </div>
-                                        {post.media && post.media.type === 'image' && (
-                                            <div className="post-image" style={{ padding: 0, overflow: 'hidden' }}>
-                                                <img src={post.media.url} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                            </div>
-                                        )}
-                                        {post.media && post.media.type === 'video' && (
-                                            <div className="post-image" style={{ padding: 0, overflow: 'hidden' }}>
-                                                <video src={post.media.url} controls style={{ width: '100%', maxHeight: '320px', objectFit: 'cover' }} />
-                                            </div>
-                                        )}
-                                        {!post.media && post.icon && (
-                                            <div className="post-image">{post.icon}</div>
-                                        )}
-                                        {post.text ? <div className="post-text">{post.text}</div> : null}
-                                        <div className="post-actions">
-                                            <button
-                                                className={`action-btn ${likedPosts[post.id] ? 'active' : ''}`}
-                                                onClick={() => setLikedPosts(p => ({ ...p, [post.id]: !p[post.id] }))}
+        const NexusApp = () => { const [darkMode, setDarkMode] = React.useState(true); const [currentPage, setCurrentPage] = React.useState('home'); const [searchQuery, setSearchQuery] = React.useState(''); const [activeChat, setActiveChat] = React.useState(null);
+        const [profile, setProfile] = React.useState({ name: 'Seu Perfil', handle: 'seuusuario', bio: 'Desenvolvedor apaixonado por tecnologia e inovação. Designer criativo e eterno aprendiz.', photo: null }); const [editingProfile, setEditingProfile]
+        = React.useState(false); const [editForm, setEditForm] = React.useState({}); const photoInputRef = React.useRef(null); const mediaInputRef = React.useRef(null); // Create post state const [createText, setCreateText] = React.useState(''); const
+        [createMedia, setCreateMedia] = React.useState(null); // { url, type: 'image'|'video', name } const [createPostType, setCreatePostType] = React.useState('post'); // 'post' | 'story' const [published, setPublished] = React.useState(false); const
+        [posts, setPosts] = React.useState([ { id: 1, author: 'Sofia Rivera', avatar: 'SR', time: 'há 2 horas', icon: '🚀', text: 'Acaba de lançar um novo projeto de IA que vai revolucionar o mercado. Totalmente open-source e disponível para todos!',
+        likes: 1240, comments: 89, media: null }, { id: 2, author: 'Lucas Dev', avatar: 'LD', time: 'há 4 horas', icon: '💻', text: 'WebGL com Three.js é simplesmente incrível. Criei uma visualização 3D interativa de um sistema solar.', likes: 856, comments:
+        45, media: null }, { id: 3, author: 'Marina Tech', avatar: 'MT', time: 'há 6 horas', icon: '🤖', text: 'Machine Learning não é mais futurista, é presente. Implementei um modelo que prevê tendências com 94% de acurácia.', likes: 2103, comments:
+        234, media: null } ]); const [likedPosts, setLikedPosts] = React.useState({}); const [openComments, setOpenComments] = React.useState({}); const [commentInputs, setCommentInputs] = React.useState({}); const [comments, setComments] = React.useState({
+        1: [{ id: 1, author: 'Lucas Dev', avatar: 'LD', text: 'Incrível iniciativa! Open-source é o futuro 🚀' }], 2: [{ id: 1, author: 'Marina Tech', avatar: 'MT', text: 'Three.js é demais! Adorei o projeto.' }], 3: [] }); const [sharePost, setSharePost]
+        = React.useState(null); const [copiedLink, setCopiedLink] = React.useState(false); const [following, setFollowing] = React.useState({}); const toggleComment = (id) => setOpenComments(p => ({ ...p, [id]: !p[id] })); const sendComment = (postId)
+        => { const text = (commentInputs[postId] || '').trim(); if (!text) return; const newC = { id: Date.now(), author: profile.name, avatar: profile.name.slice(0,2).toUpperCase(), avatarPhoto: profile.photo, text }; setComments(p => ({ ...p, [postId]:
+        [...(p[postId] || []), newC] })); setCommentInputs(p => ({ ...p, [postId]: '' })); setPosts(prev => prev.map(p => p.id === postId ? { ...p, comments: p.comments + 1 } : p)); }; const copyLink = () => { setCopiedLink(true); setTimeout(() => setCopiedLink(false),
+        2000); }; const people = [ { name: 'Sofia Rivera', handle: 'sofiadev', avatar: 'SR' }, { name: 'Lucas Dev', handle: 'lucasdev', avatar: 'LD' }, { name: 'Marina Tech', handle: 'marinatech', avatar: 'MT' }, { name: 'Pedro Silva', handle: 'pedrosilva',
+        avatar: 'PS' }, ]; const handleMediaSelect = (e) => { const file = e.target.files[0]; if (!file) return; const url = URL.createObjectURL(file); const type = file.type.startsWith('video') ? 'video' : 'image'; setCreateMedia({ url, type, name: file.name
+        }); e.target.value = ''; }; const publishPost = () => { if (!createText.trim() && !createMedia) return; const newPost = { id: Date.now(), author: profile.name, avatar: profile.photo ? null : profile.name.slice(0, 2).toUpperCase(), avatarPhoto:
+        profile.photo, time: 'agora mesmo', icon: null, text: createText, likes: 0, comments: 0, media: createMedia }; setPosts(prev => [newPost, ...prev]); setCreateText(''); setCreateMedia(null); setPublished(true); setTimeout(() => { setPublished(false);
+        setCurrentPage('home'); }, 1800); }; const openEditProfile = () => { setEditForm({ name: profile.name, handle: profile.handle, bio: profile.bio, photo: profile.photo }); setEditingProfile(true); }; const saveProfile = () => { setProfile(editForm);
+        setEditingProfile(false); }; const handlePhotoChange = (e) => { const file = e.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = (ev) => setEditForm(f => ({ ...f, photo: ev.target.result })); reader.readAsDataURL(file);
+        }; const [chatInput, setChatInput] = React.useState(''); const [conversations, setConversations] = React.useState({ 0: [ { id: 1, text: 'Ótimo projeto! Podemos colaborar?', sent: false, time: '14:20' }, { id: 2, text: 'Claro! Que tipo de colaboração
+        você tem em mente?', sent: true, time: '14:22' }, { id: 3, text: 'Pensei em unir nossas ideias para o hackathon da próxima semana', sent: false, time: '14:23' }, ], 1: [ { id: 1, text: 'Você viu o código que compartilhei?', sent: false, time:
+        '11:10' }, { id: 2, text: 'Vi sim! Muito elegante a solução do componente', sent: true, time: '11:15' }, ], 2: [ { id: 1, text: 'Convite para webinar amanhã', sent: false, time: '09:00' }, ], 3: [ { id: 1, text: 'Aprovou meu pull request!', sent:
+        false, time: '08:45' }, { id: 2, text: 'Muito bem! O código ficou bem limpo 🎉', sent: true, time: '08:50' }, ] }); const messagesEndRef = React.useRef(null); React.useEffect(() => { if (messagesEndRef.current) { messagesEndRef.current.scrollIntoView({
+        behavior: 'smooth' }); } }, [conversations, activeChat]); const sendMessage = () => { const text = chatInput.trim(); if (!text || activeChat === null) return; const newMsg = { id: Date.now(), text, sent: true, time: new Date().toLocaleTimeString('pt-BR',
+        { hour: '2-digit', minute: '2-digit' }) }; setConversations(prev => ({ ...prev, [activeChat]: [...(prev[activeChat] || []), newMsg] })); setChatInput(''); }; const handleChatKeyDown = (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault();
+        sendMessage(); } }; React.useEffect(() => { document.body.className = darkMode ? '' : 'light'; }, [darkMode]); const renderHeader = () => { const titles = { home: 'Início', explore: 'Explorar', messages: 'Mensagens', notifications: 'Notificações',
+        create: 'Criar', profile: 'Perfil', settings: 'Configurações' }; return titles[currentPage] || 'Nexus'; }; const renderContent = () => { switch (currentPage) { case 'home': return (
+        <div className="home-layout">
+            {/* FEED */}
+            <div className="home-feed">
+                {posts.map(post => (
+                <div key={post.id} className="post-card">
+                    <div className="post-header">
+                        <div className="post-avatar" style={{ overflow: 'hidden' }}>
+                            {post.avatarPhoto ? <img src={post.avatarPhoto} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} /> : post.avatar }
+                        </div>
+                        <div className="post-meta">
+                            <div className="post-author">{post.author}</div>
+                            <div className="post-time">{post.time}</div>
+                        </div>
+                    </div>
+                    {post.media && post.media.type === 'image' && (
+                    <div className="post-image" style={{ padding: 0, overflow: 'hidden' }}>
+                        <img src={post.media.url} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    )} {post.media && post.media.type === 'video' && (
+                    <div className="post-image" style={{ padding: 0, overflow: 'hidden' }}>
+                        <video src={post.media.url} controls style={{ width: '100%', maxHeight: '320px', objectFit: 'cover' }} />
+                    </div>
+                    )} {!post.media && post.icon && (
+                    <div className="post-image">{post.icon}</div>
+                    )} {post.text ?
+                    <div className="post-text">{post.text}</div> : null}
+                    <div className="post-actions">
+                        <button className={`action-btn ${likedPosts[post.id] ? 'active' : ''}`} onClick={()=> setLikedPosts(p => ({ ...p, [post.id]: !p[post.id] }))}
                                             >
                                                 {likedPosts[post.id] ? '❤️' : '🤍'} {post.likes + (likedPosts[post.id] ? 1 : 0)}
                                             </button>
-                                            <button
-                                                className={`action-btn ${openComments[post.id] ? 'active' : ''}`}
-                                                onClick={() => toggleComment(post.id)}
+                        <button className={`action-btn ${openComments[post.id] ? 'active' : ''}`} onClick={()=> toggleComment(post.id)}
                                             >
                                                 💬 {(comments[post.id] || []).length + (post.comments - (post.id <= 3 ? (post.id === 1 ? 89 : post.id === 2 ? 45 : 234) : 0) + ((comments[post.id] || []).length))}
                                             </button>
-                                            <button className="action-btn" onClick={() => setSharePost(post)}>
+                        <button className="action-btn" onClick={()=> setSharePost(post)}>
                                                 🔁 Compartilhar
                                             </button>
-                                        </div>
+                    </div>
 
-                                        {/* COMMENTS SECTION */}
-                                        {openComments[post.id] && (
-                                            <div className="comments-section">
-                                                {(comments[post.id] || []).map(c => (
-                                                    <div key={c.id} className="comment-item">
-                                                        <div className="comment-avatar" style={{ overflow: 'hidden' }}>
-                                                            {c.avatarPhoto
-                                                                ? <img src={c.avatarPhoto} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px' }} />
-                                                                : c.avatar
-                                                            }
-                                                        </div>
-                                                        <div className="comment-bubble">
-                                                            <div className="comment-author">{c.author}</div>
-                                                            <div className="comment-text">{c.text}</div>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                                <div className="comment-input-row">
-                                                    <div className="comment-avatar" style={{ overflow: 'hidden' }}>
-                                                        {profile.photo
-                                                            ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px' }} />
-                                                            : profile.name.slice(0,2).toUpperCase()
-                                                        }
-                                                    </div>
-                                                    <input
-                                                        className="comment-input"
-                                                        placeholder="Escreva um comentário..."
-                                                        value={commentInputs[post.id] || ''}
-                                                        onChange={e => setCommentInputs(p => ({ ...p, [post.id]: e.target.value }))}
-                                                        onKeyDown={e => e.key === 'Enter' && sendComment(post.id)}
-                                                    />
-                                                    <button
-                                                        className="comment-send"
-                                                        onClick={() => sendComment(post.id)}
+                    {/* COMMENTS SECTION */} {openComments[post.id] && (
+                    <div className="comments-section">
+                        {(comments[post.id] || []).map(c => (
+                        <div key={c.id} className="comment-item">
+                            <div className="comment-avatar" style={{ overflow: 'hidden' }}>
+                                {c.avatarPhoto ? <img src={c.avatarPhoto} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px' }} /> : c.avatar }
+                            </div>
+                            <div className="comment-bubble">
+                                <div className="comment-author">{c.author}</div>
+                                <div className="comment-text">{c.text}</div>
+                            </div>
+                        </div>
+                        ))}
+                        <div className="comment-input-row">
+                            <div className="comment-avatar" style={{ overflow: 'hidden' }}>
+                                {profile.photo ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px' }} /> : profile.name.slice(0,2).toUpperCase() }
+                            </div>
+                            <input className="comment-input" placeholder="Escreva um comentário..." value={commentInputs[post.id] || ''} onChange={e=> setCommentInputs(p => ({ ...p, [post.id]: e.target.value }))} onKeyDown={e => e.key === 'Enter' && sendComment(post.id)}
+                            />
+                            <button className="comment-send" onClick={()=> sendComment(post.id)}
                                                         disabled={!(commentInputs[post.id] || '').trim()}
                                                     >➤</button>
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                                </div>
+                        </div>
+                    </div>
+                    )}
+                </div>
+                ))}
+            </div>
 
-                                {/* RIGHT SIDEBAR — Pessoas */}
-                                <div className="home-right">
-                                    <div className="home-right-card">
-                                        <div className="rs-section-title">Quem seguir</div>
-                                        {people.map((p, i) => (
-                                            <div key={i} className="rs-person">
-                                                <div className="rs-avatar">{p.avatar}</div>
-                                                <div className="rs-person-info">
-                                                    <div className="rs-person-name">{p.name}</div>
-                                                    <div className="rs-person-handle">@{p.handle}</div>
-                                                </div>
-                                                <button
-                                                    className={`rs-follow-btn ${following[i] ? 'following' : ''}`}
-                                                    onClick={() => setFollowing(f => ({ ...f, [i]: !f[i] }))}
+            {/* RIGHT SIDEBAR — Pessoas */}
+            <div className="home-right">
+                <div className="home-right-card">
+                    <div className="rs-section-title">Quem seguir</div>
+                    {people.map((p, i) => (
+                    <div key={i} className="rs-person">
+                        <div className="rs-avatar">{p.avatar}</div>
+                        <div className="rs-person-info">
+                            <div className="rs-person-name">{p.name}</div>
+                            <div className="rs-person-handle">@{p.handle}</div>
+                        </div>
+                        <button className={`rs-follow-btn ${following[i] ? 'following' : ''}`} onClick={()=> setFollowing(f => ({ ...f, [i]: !f[i] }))}
                                                 >
                                                     {following[i] ? '✓ Seguindo' : 'Seguir'}
                                                 </button>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="home-right-card">
-                                        <div className="rs-section-title">Online agora</div>
-                                        {people.slice(0,3).map((p, i) => (
-                                            <div key={i} className="rs-person" onClick={() => { setActiveChat(i); setCurrentPage('messages'); }}>
-                                                <div style={{ position: 'relative' }}>
-                                                    <div className="rs-avatar">{p.avatar}</div>
-                                                    <div style={{ position: 'absolute', bottom: 0, right: 0, width: 10, height: 10, borderRadius: '50%', background: '#22c55e', border: '2px solid #1a1a1a' }}></div>
-                                                </div>
-                                                <div className="rs-person-info">
-                                                    <div className="rs-person-name">{p.name}</div>
-                                                    <div className="rs-person-handle" style={{ color: '#22c55e', fontSize: 11 }}>● Online</div>
-                                                </div>
-                                                <span style={{ fontSize: 16, color: '#555' }}>✉</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        );
+                    </div>
+                    ))}
+                </div>
+                <div className="home-right-card">
+                    <div className="rs-section-title">Online agora</div>
+                    {people.slice(0,3).map((p, i) => (
+                    <div key={i} className="rs-person" onClick={()=> { setActiveChat(i); setCurrentPage('messages'); }}>
+                        <div style={{ position: 'relative' }}>
+                            <div className="rs-avatar">{p.avatar}</div>
+                            <div style={{ position: 'absolute', bottom: 0, right: 0, width: 10, height: 10, borderRadius: '50%', background: '#22c55e', border: '2px solid #1a1a1a' }}></div>
+                        </div>
+                        <div className="rs-person-info">
+                            <div className="rs-person-name">{p.name}</div>
+                            <div className="rs-person-handle" style={{ color: '#22c55e', fontSize: 11 }}>● Online</div>
+                        </div>
+                        <span style={{ fontSize: 16, color: '#555' }}>✉</span>
+                    </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+        ); case 'create': return (
+        <div className="create-page">
+            {published && (
+            <div className="feed-published">
+                <span style={{ fontSize: 20 }}>✅</span>
+                <span>Post publicado! Redirecionando para o feed...</span>
+            </div>
+            )}
 
-                    case 'create':
-                        return (
-                            <div className="create-page">
-                                {published && (
-                                    <div className="feed-published">
-                                        <span style={{ fontSize: 20 }}>✅</span>
-                                        <span>Post publicado! Redirecionando para o feed...</span>
-                                    </div>
-                                )}
-
-                                <div className="create-type-tabs">
-                                    {[{ id: 'post', label: 'Post', icon: '📝' }, { id: 'story', label: 'Story', icon: '⚡' }].map(t => (
-                                        <button key={t.id} className={`create-type-tab ${createPostType === t.id ? 'active' : ''}`} onClick={() => setCreatePostType(t.id)}>
+            <div className="create-type-tabs">
+                {[{ id: 'post', label: 'Post', icon: '📝' }, { id: 'story', label: 'Story', icon: '⚡' }].map(t => (
+                <button key={t.id} className={`create-type-tab ${createPostType===t .id ? 'active' : ''}`} onClick={()=> setCreatePostType(t.id)}>
                                             <span>{t.icon}</span>{t.label}
-                                        </button>
-                                    ))}
-                                </div>
+                                        </button> ))}
+            </div>
 
-                                <div className="create-card">
-                                    <div className="create-top">
-                                        <div className="post-avatar" style={{ overflow: 'hidden', flexShrink: 0 }}>
-                                            {profile.photo
-                                                ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
-                                                : profile.name.slice(0, 2).toUpperCase()
-                                            }
-                                        </div>
-                                        <textarea
-                                            className="create-textarea"
-                                            placeholder={createPostType === 'story' ? 'O que está acontecendo agora?' : 'Compartilhe algo com sua rede...'}
-                                            value={createText}
-                                            onChange={e => setCreateText(e.target.value)}
+            <div className="create-card">
+                <div className="create-top">
+                    <div className="post-avatar" style={{ overflow: 'hidden', flexShrink: 0 }}>
+                        {profile.photo ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} /> : profile.name.slice(0, 2).toUpperCase() }
+                    </div>
+                    <textarea className="create-textarea" placeholder={createPostType==='story' ? 'O que está acontecendo agora?' : 'Compartilhe algo com sua rede...'} value={createText} onChange={e=> setCreateText(e.target.value)}
                                             maxLength={500}
                                             rows={3}
                                         />
@@ -2839,6 +2700,8 @@
                         </div>
                     </div>
                 </div>
+
+    
             );
         };
 
