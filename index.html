@@ -1051,6 +1051,536 @@
             opacity: 0.4;
         }
 
+        /* EDIT PROFILE MODAL */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-box {
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 2rem;
+            width: 480px;
+            max-width: 95vw;
+            animation: slideUp 0.25s ease;
+        }
+
+        body.light .modal-box {
+            background: #ffffff;
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(24px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .edit-photo-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 10px;
+        }
+
+        .edit-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            overflow: hidden;
+            border: 3px solid rgba(0,212,255,0.4);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .edit-avatar:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 0 4px rgba(0,212,255,0.15);
+        }
+
+        .edit-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .edit-avatar-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 22px;
+        }
+
+        .edit-avatar:hover .edit-avatar-overlay {
+            opacity: 1;
+        }
+
+        .edit-photo-hint {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .edit-field {
+            margin-bottom: 1rem;
+        }
+
+        .edit-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .edit-input {
+            width: 100%;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 14px;
+            color: #e0e0e0;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        body.light .edit-input {
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.12);
+            color: #1a1a1a;
+        }
+
+        .edit-input:focus {
+            border-color: rgba(0,212,255,0.5);
+            background: rgba(0,212,255,0.05);
+        }
+
+        textarea.edit-input {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .edit-handle-prefix {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        body.light .edit-handle-prefix {
+            background: rgba(0,0,0,0.04);
+            border-color: rgba(0,0,0,0.12);
+        }
+
+        .edit-handle-prefix span {
+            padding: 10px 10px 10px 14px;
+            color: #555;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .edit-handle-prefix input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 10px 14px 10px 0;
+            font-size: 14px;
+            color: #e0e0e0;
+            font-family: inherit;
+            outline: none;
+        }
+
+        body.light .edit-handle-prefix input {
+            color: #1a1a1a;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .btn-cancel {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: transparent;
+            color: #888;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        body.light .btn-cancel {
+            border-color: rgba(0,0,0,0.12);
+            color: #555;
+        }
+
+        .btn-cancel:hover {
+            border-color: rgba(255,255,255,0.25);
+            color: #e0e0e0;
+        }
+
+        .btn-save {
+            flex: 2;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0,212,255,0.3);
+        }
+
+        /* CREATE PAGE */
+        .create-page {
+            max-width: 640px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .create-card {
+            background: rgba(22,22,22,0.9);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        body.light .create-card {
+            background: rgba(255,255,255,0.9);
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        .create-top {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .create-textarea {
+            flex: 1;
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            color: #e0e0e0;
+            font-family: inherit;
+            resize: none;
+            outline: none;
+            min-height: 80px;
+            line-height: 1.6;
+        }
+
+        body.light .create-textarea {
+            color: #1a1a1a;
+        }
+
+        .create-textarea::placeholder {
+            color: #444;
+        }
+
+        body.light .create-textarea::placeholder {
+            color: #aaa;
+        }
+
+        .create-media-preview {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        body.light .create-media-preview {
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        .create-media-preview img,
+        .create-media-preview video {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .create-media-remove {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.7);
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .create-media-remove:hover {
+            background: rgba(255,50,50,0.8);
+        }
+
+        .create-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin: 0;
+        }
+
+        body.light .create-divider {
+            border-top-color: rgba(0,0,0,0.08);
+        }
+
+        .create-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding-top: 1rem;
+        }
+
+        .create-tool-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 7px 12px;
+            color: #00d4ff;
+            font-size: 13px;
+            font-weight: 500;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .create-tool-btn:hover {
+            background: rgba(0,212,255,0.08);
+            border-color: rgba(0,212,255,0.2);
+        }
+
+        body.light .create-tool-btn {
+            color: #7c3aed;
+        }
+
+        body.light .create-tool-btn:hover {
+            background: rgba(124,58,237,0.08);
+            border-color: rgba(124,58,237,0.2);
+        }
+
+        .create-tool-icon {
+            font-size: 18px;
+        }
+
+        .create-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0;
+            padding-top: 1rem;
+        }
+
+        .create-char-count {
+            font-size: 12px;
+            color: #555;
+        }
+
+        .create-char-count.warn {
+            color: #f59e0b;
+        }
+
+        .create-char-count.over {
+            color: #ef4444;
+        }
+
+        .create-submit-btn {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .create-submit-btn:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0,212,255,0.35);
+        }
+
+        .create-submit-btn:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        .create-type-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 1.2rem;
+        }
+
+        .create-type-tab {
+            flex: 1;
+            padding: 10px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #666;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        body.light .create-type-tab {
+            background: rgba(0,0,0,0.03);
+            border-color: rgba(0,0,0,0.1);
+            color: #999;
+        }
+
+        .create-type-tab.active {
+            background: rgba(0,212,255,0.1);
+            border-color: rgba(0,212,255,0.4);
+            color: #00d4ff;
+        }
+
+        body.light .create-type-tab.active {
+            background: rgba(124,58,237,0.1);
+            border-color: rgba(124,58,237,0.4);
+            color: #7c3aed;
+        }
+
+        .create-dropzone {
+            border: 2px dashed rgba(0,212,255,0.3);
+            border-radius: 14px;
+            padding: 2.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .create-dropzone:hover {
+            border-color: rgba(0,212,255,0.6);
+            background: rgba(0,212,255,0.04);
+        }
+
+        body.light .create-dropzone {
+            border-color: rgba(124,58,237,0.3);
+        }
+
+        body.light .create-dropzone:hover {
+            border-color: rgba(124,58,237,0.6);
+            background: rgba(124,58,237,0.04);
+        }
+
+        .create-dropzone-icon {
+            font-size: 40px;
+        }
+
+        .create-dropzone-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        body.light .create-dropzone-text {
+            color: #1a1a1a;
+        }
+
+        .create-dropzone-sub {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .feed-published {
+            background: rgba(0,212,255,0.06);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #00d4ff;
+            animation: slideIn 0.3s ease;
+        }
+
+        body.light .feed-published {
+            background: rgba(124,58,237,0.06);
+            border-color: rgba(124,58,237,0.2);
+            color: #7c3aed;
+        }
+
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -1140,6 +1670,76 @@
             const [currentPage, setCurrentPage] = React.useState('home');
             const [searchQuery, setSearchQuery] = React.useState('');
             const [activeChat, setActiveChat] = React.useState(null);
+            const [profile, setProfile] = React.useState({
+                name: 'Seu Perfil',
+                handle: 'seuusuario',
+                bio: 'Desenvolvedor apaixonado por tecnologia e inovação. Designer criativo e eterno aprendiz.',
+                photo: null
+            });
+            const [editingProfile, setEditingProfile] = React.useState(false);
+            const [editForm, setEditForm] = React.useState({});
+            const photoInputRef = React.useRef(null);
+            const mediaInputRef = React.useRef(null);
+
+            // Create post state
+            const [createText, setCreateText] = React.useState('');
+            const [createMedia, setCreateMedia] = React.useState(null); // { url, type: 'image'|'video', name }
+            const [createPostType, setCreatePostType] = React.useState('post'); // 'post' | 'story'
+            const [published, setPublished] = React.useState(false);
+            const [posts, setPosts] = React.useState([
+                { id: 1, author: 'Sofia Rivera', avatar: 'SR', time: 'há 2 horas', icon: '🚀', text: 'Acaba de lançar um novo projeto de IA que vai revolucionar o mercado. Totalmente open-source e disponível para todos!', likes: 1240, comments: 89, media: null },
+                { id: 2, author: 'Lucas Dev', avatar: 'LD', time: 'há 4 horas', icon: '💻', text: 'WebGL com Three.js é simplesmente incrível. Criei uma visualização 3D interativa de um sistema solar.', likes: 856, comments: 45, media: null },
+                { id: 3, author: 'Marina Tech', avatar: 'MT', time: 'há 6 horas', icon: '🤖', text: 'Machine Learning não é mais futurista, é presente. Implementei um modelo que prevê tendências com 94% de acurácia.', likes: 2103, comments: 234, media: null }
+            ]);
+            const [likedPosts, setLikedPosts] = React.useState({});
+
+            const handleMediaSelect = (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const url = URL.createObjectURL(file);
+                const type = file.type.startsWith('video') ? 'video' : 'image';
+                setCreateMedia({ url, type, name: file.name });
+                e.target.value = '';
+            };
+
+            const publishPost = () => {
+                if (!createText.trim() && !createMedia) return;
+                const newPost = {
+                    id: Date.now(),
+                    author: profile.name,
+                    avatar: profile.photo ? null : profile.name.slice(0, 2).toUpperCase(),
+                    avatarPhoto: profile.photo,
+                    time: 'agora mesmo',
+                    icon: null,
+                    text: createText,
+                    likes: 0,
+                    comments: 0,
+                    media: createMedia
+                };
+                setPosts(prev => [newPost, ...prev]);
+                setCreateText('');
+                setCreateMedia(null);
+                setPublished(true);
+                setTimeout(() => { setPublished(false); setCurrentPage('home'); }, 1800);
+            };
+
+            const openEditProfile = () => {
+                setEditForm({ name: profile.name, handle: profile.handle, bio: profile.bio, photo: profile.photo });
+                setEditingProfile(true);
+            };
+
+            const saveProfile = () => {
+                setProfile(editForm);
+                setEditingProfile(false);
+            };
+
+            const handlePhotoChange = (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (ev) => setEditForm(f => ({ ...f, photo: ev.target.result }));
+                reader.readAsDataURL(file);
+            };
             const [chatInput, setChatInput] = React.useState('');
             const [conversations, setConversations] = React.useState({
                 0: [
@@ -1207,55 +1807,120 @@
                     case 'home':
                         return (
                             <div className="feed-container">
-                                {[
-                                    {
-                                        id: 1,
-                                        author: 'Sofia Rivera',
-                                        avatar: 'SR',
-                                        time: 'há 2 horas',
-                                        icon: '🚀',
-                                        text: 'Acaba de lançar um novo projeto de IA que vai revolucionar o mercado. Totalmente open-source e disponível para todos!',
-                                        likes: 1240,
-                                        comments: 89
-                                    },
-                                    {
-                                        id: 2,
-                                        author: 'Lucas Dev',
-                                        avatar: 'LD',
-                                        time: 'há 4 horas',
-                                        icon: '💻',
-                                        text: 'WebGL com Three.js é simplesmente incrível. Criei uma visualização 3D interativa de um sistema solar.',
-                                        likes: 856,
-                                        comments: 45
-                                    },
-                                    {
-                                        id: 3,
-                                        author: 'Marina Tech',
-                                        avatar: 'MT',
-                                        time: 'há 6 horas',
-                                        icon: '🤖',
-                                        text: 'Machine Learning não é mais futurista, é presente. Implementei um modelo que prevê tendências com 94% de acurácia.',
-                                        likes: 2103,
-                                        comments: 234
-                                    }
-                                ].map(post => (
+                                {posts.map(post => (
                                     <div key={post.id} className="post-card">
                                         <div className="post-header">
-                                            <div className="post-avatar">{post.avatar}</div>
+                                            <div className="post-avatar" style={{ overflow: 'hidden' }}>
+                                                {post.avatarPhoto
+                                                    ? <img src={post.avatarPhoto} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
+                                                    : post.avatar
+                                                }
+                                            </div>
                                             <div className="post-meta">
                                                 <div className="post-author">{post.author}</div>
                                                 <div className="post-time">{post.time}</div>
                                             </div>
                                         </div>
-                                        <div className="post-image">{post.icon}</div>
-                                        <div className="post-text">{post.text}</div>
+                                        {post.media && post.media.type === 'image' && (
+                                            <div className="post-image" style={{ padding: 0, overflow: 'hidden' }}>
+                                                <img src={post.media.url} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            </div>
+                                        )}
+                                        {post.media && post.media.type === 'video' && (
+                                            <div className="post-image" style={{ padding: 0, overflow: 'hidden' }}>
+                                                <video src={post.media.url} controls style={{ width: '100%', maxHeight: '320px', objectFit: 'cover' }} />
+                                            </div>
+                                        )}
+                                        {!post.media && post.icon && (
+                                            <div className="post-image">{post.icon}</div>
+                                        )}
+                                        {post.text ? <div className="post-text">{post.text}</div> : null}
                                         <div className="post-actions">
-                                            <button className="action-btn">❤️ {post.likes}</button>
+                                            <button className="action-btn" onClick={() => setLikedPosts(p => ({ ...p, [post.id]: !p[post.id] }))}>
+                                                {likedPosts[post.id] ? '❤️' : '🤍'} {post.likes + (likedPosts[post.id] ? 1 : 0)}
+                                            </button>
                                             <button className="action-btn">💬 {post.comments}</button>
                                             <button className="action-btn">🔁 Compartilhar</button>
                                         </div>
                                     </div>
                                 ))}
+                            </div>
+                        );
+
+                    case 'create':
+                        return (
+                            <div className="create-page">
+                                {published && (
+                                    <div className="feed-published">
+                                        <span style={{ fontSize: 20 }}>✅</span>
+                                        <span>Post publicado! Redirecionando para o feed...</span>
+                                    </div>
+                                )}
+
+                                <div className="create-type-tabs">
+                                    {[{ id: 'post', label: 'Post', icon: '📝' }, { id: 'story', label: 'Story', icon: '⚡' }].map(t => (
+                                        <button key={t.id} className={`create-type-tab ${createPostType === t.id ? 'active' : ''}`} onClick={() => setCreatePostType(t.id)}>
+                                            <span>{t.icon}</span>{t.label}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                <div className="create-card">
+                                    <div className="create-top">
+                                        <div className="post-avatar" style={{ overflow: 'hidden', flexShrink: 0 }}>
+                                            {profile.photo
+                                                ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
+                                                : profile.name.slice(0, 2).toUpperCase()
+                                            }
+                                        </div>
+                                        <textarea
+                                            className="create-textarea"
+                                            placeholder={createPostType === 'story' ? 'O que está acontecendo agora?' : 'Compartilhe algo com sua rede...'}
+                                            value={createText}
+                                            onChange={e => setCreateText(e.target.value)}
+                                            maxLength={500}
+                                            rows={3}
+                                        />
+                                    </div>
+
+                                    {createMedia && (
+                                        <div className="create-media-preview">
+                                            {createMedia.type === 'image'
+                                                ? <img src={createMedia.url} alt="preview" />
+                                                : <video src={createMedia.url} controls />
+                                            }
+                                            <button className="create-media-remove" onClick={() => setCreateMedia(null)}>✕</button>
+                                        </div>
+                                    )}
+
+                                    <hr className="create-divider" />
+
+                                    <div className="create-toolbar">
+                                        <button className="create-tool-btn" onClick={() => { mediaInputRef.current.accept = 'image/*'; mediaInputRef.current.click(); }}>
+                                            <span className="create-tool-icon">🖼️</span> Foto
+                                        </button>
+                                        <button className="create-tool-btn" onClick={() => { mediaInputRef.current.accept = 'video/*'; mediaInputRef.current.click(); }}>
+                                            <span className="create-tool-icon">🎬</span> Vídeo
+                                        </button>
+                                        <button className="create-tool-btn" onClick={() => { mediaInputRef.current.accept = 'image/*,video/*'; mediaInputRef.current.click(); }}>
+                                            <span className="create-tool-icon">📎</span> Arquivo
+                                        </button>
+                                        <input ref={mediaInputRef} type="file" style={{ display: 'none' }} onChange={handleMediaSelect} />
+                                    </div>
+
+                                    <div className="create-actions">
+                                        <span className={`create-char-count ${createText.length > 450 ? 'over' : createText.length > 350 ? 'warn' : ''}`}>
+                                            {createText.length}/500
+                                        </span>
+                                        <button
+                                            className="create-submit-btn"
+                                            onClick={publishPost}
+                                            disabled={!createText.trim() && !createMedia}
+                                        >
+                                            {createPostType === 'story' ? '⚡ Publicar Story' : '🚀 Publicar'}
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         );
 
@@ -1398,11 +2063,16 @@
                         return (
                             <div style={{ maxWidth: '600px', margin: '0 auto' }}>
                                 <div className="profile-header">
-                                    <div className="profile-avatar">YOU</div>
-                                    <div className="profile-name">Seu Perfil</div>
-                                    <div className="profile-handle">@seuusuario</div>
-                                    <div className="profile-bio">Desenvolvedor apaixonado por tecnologia e inovação. Designer criativo e eterno aprendiz.</div>
-                                    <button className="profile-btn">Editar Perfil</button>
+                                    <div className="profile-avatar" style={{ cursor: 'pointer' }} onClick={openEditProfile}>
+                                        {profile.photo
+                                            ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                                            : profile.name.slice(0, 2).toUpperCase()
+                                        }
+                                    </div>
+                                    <div className="profile-name">{profile.name}</div>
+                                    <div className="profile-handle">@{profile.handle}</div>
+                                    <div className="profile-bio">{profile.bio}</div>
+                                    <button className="profile-btn" onClick={openEditProfile}>Editar Perfil</button>
                                 </div>
                                 <div className="profile-stats">
                                     <div className="stat-box">
@@ -1454,6 +2124,70 @@
 
             return (
                 <div className="app">
+                    {/* EDIT PROFILE MODAL */}
+                    {editingProfile && (
+                        <div className="modal-overlay" onClick={e => e.target === e.currentTarget && setEditingProfile(false)}>
+                            <div className="modal-box">
+                                <div className="modal-title">Editar Perfil</div>
+
+                                <div className="edit-photo-area">
+                                    <div className="edit-avatar" onClick={() => photoInputRef.current.click()}>
+                                        {editForm.photo
+                                            ? <img src={editForm.photo} />
+                                            : (editForm.name || '?').slice(0, 2).toUpperCase()
+                                        }
+                                        <div className="edit-avatar-overlay">📷</div>
+                                    </div>
+                                    <div className="edit-photo-hint">Clique na foto para trocar</div>
+                                    <input
+                                        ref={photoInputRef}
+                                        type="file"
+                                        accept="image/*"
+                                        style={{ display: 'none' }}
+                                        onChange={handlePhotoChange}
+                                    />
+                                </div>
+
+                                <div className="edit-field">
+                                    <div className="edit-label">Nome</div>
+                                    <input
+                                        className="edit-input"
+                                        value={editForm.name || ''}
+                                        onChange={e => setEditForm(f => ({ ...f, name: e.target.value }))}
+                                        placeholder="Seu nome"
+                                    />
+                                </div>
+
+                                <div className="edit-field">
+                                    <div className="edit-label">Usuário</div>
+                                    <div className="edit-handle-prefix">
+                                        <span>@</span>
+                                        <input
+                                            value={editForm.handle || ''}
+                                            onChange={e => setEditForm(f => ({ ...f, handle: e.target.value.replace(/\s/g, '').toLowerCase() }))}
+                                            placeholder="seuusuario"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="edit-field">
+                                    <div className="edit-label">Bio</div>
+                                    <textarea
+                                        className="edit-input"
+                                        value={editForm.bio || ''}
+                                        onChange={e => setEditForm(f => ({ ...f, bio: e.target.value }))}
+                                        placeholder="Fale um pouco sobre você..."
+                                    />
+                                </div>
+
+                                <div className="modal-actions">
+                                    <button className="btn-cancel" onClick={() => setEditingProfile(false)}>Cancelar</button>
+                                    <button className="btn-save" onClick={saveProfile}>Salvar alterações</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     {/* SIDEBAR */}
                     <div className="sidebar">
                         <div className="logo">
@@ -1493,10 +2227,15 @@
 
                         <div className="sidebar-bottom">
                             <div className="user-profile" onClick={() => setCurrentPage('profile')}>
-                                <div className="user-avatar">Y</div>
+                                <div className="user-avatar" style={{ overflow: 'hidden' }}>
+                                    {profile.photo
+                                        ? <img src={profile.photo} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                                        : profile.name.slice(0, 1).toUpperCase()
+                                    }
+                                </div>
                                 <div className="user-info">
-                                    <div className="user-name">Você</div>
-                                    <div className="user-handle">@usuario</div>
+                                    <div className="user-name">{profile.name}</div>
+                                    <div className="user-handle">@{profile.handle}</div>
                                 </div>
                             </div>
                             <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
